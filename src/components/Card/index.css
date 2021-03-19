@@ -81,6 +81,11 @@
     width: 240px;
   }
 
+  .card .text {
+    position: relative;
+    height: 100%;
+  }
+
   .skeleton {
     width: 240px;
   }
