@@ -83,7 +83,8 @@
 
   .card .text {
     position: relative;
-    height: 100%;
+    height: 136px;
+    background: red;
   }
 
   .skeleton {
