@@ -1,0 +1,30 @@
+.homeCollection {
+  margin-bottom: 20px;
+}
+
+.collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.collection:after {
+  content: '';
+  flex: auto;
+}
+
+.collectionTitle {
+  font-size: 20px;
+  color: var(--section-title-color);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 767px){
+  .collection {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    max-width: 100%;
+    position: relative;
+    overflow-y: hidden;
+  }
+}

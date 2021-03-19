@@ -1,0 +1,14 @@
+.breadcrumb {
+  background: #EDF2F7;
+  padding: 10px;
+}
+
+.search {
+  padding: 26px 266px;
+}
+
+@media screen and (max-width: 767px){
+  .search {
+    padding: 20px;
+  }
+}
