@@ -4,7 +4,7 @@ import { Button } from "@chakra-ui/react";
 import './index.css';
 
 function Card({ image, course, startDate, landingPageLink, expired }) {
-	console.log(expired)
+	
 	return (
 		<a href={!expired && landingPageLink} target="_blank">
 			<div className="card">

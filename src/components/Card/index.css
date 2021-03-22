@@ -42,6 +42,19 @@
   left: 0;
 }
 
+.card .thumbnail:before {
+  content: "AULAS ON-LINE";
+  background: #EE5253;
+  font-size: 10px;
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  border-radius: 2px;
+  z-index: 10;
+  padding: 4px;
+  color: #f1f1f1;
+}
+
 .card .thumbnail img {
   position: relative;
   object-fit: cover;
