@@ -12,9 +12,8 @@ export const getCourseDataAndThumbnails = async () => {
 
   } catch (error) {
     throw new Error(error);
-
   }
-}
+};
 
 export const getIES = async () => {
   try {

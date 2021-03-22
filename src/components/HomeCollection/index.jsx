@@ -15,7 +15,6 @@ import {
 import './index.css';
 
 export default function HomeCollection({ data, title, isLoading }) {
-
   return (
     <div className="homeCollection">
       <Provider>
@@ -45,6 +44,7 @@ export default function HomeCollection({ data, title, isLoading }) {
                       course={item[9]}
                       landingPageLink={item[11]}
                       key={index}
+                      expired={item[8] === "TRUE"}
                     />
                   )
                 })}

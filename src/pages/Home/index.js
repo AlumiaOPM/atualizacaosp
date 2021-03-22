@@ -16,7 +16,7 @@ export default function Home() {
       const data = await getCourseDataAndThumbnails();
       setCourses(data);
       setIsLoading(true);
-    }
+    };
 
     getData();
   }, []);
