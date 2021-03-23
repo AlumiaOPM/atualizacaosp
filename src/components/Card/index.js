@@ -3,7 +3,7 @@ import { Button } from "@chakra-ui/react";
 
 import './index.css';
 
-function Card({ image, course, startDate, landingPageLink, expired }) {
+function Card({ image, course, startDate, landingPageLink, expired, openPopup }) {
 	
 	return (
 		<a href={!expired && landingPageLink} target="_blank">
@@ -28,6 +28,7 @@ function Card({ image, course, startDate, landingPageLink, expired }) {
 						size="lg"
 						variant="outline"
 						width="100%"
+						onClick={() => openPopup(course)}
 					>Avise-me</Button>}
 				</div>
 			</div>

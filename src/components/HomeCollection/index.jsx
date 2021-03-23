@@ -14,7 +14,7 @@ import {
 
 import './index.css';
 
-export default function HomeCollection({ data, title, isLoading }) {
+export default function HomeCollection({ data, title, isLoading, openPopup }) {
   return (
     <div className="homeCollection">
       <Provider>
@@ -45,6 +45,7 @@ export default function HomeCollection({ data, title, isLoading }) {
                       landingPageLink={item[11]}
                       key={index}
                       expired={item[8] === "TRUE"}
+                      openPopup={openPopup}
                     />
                   )
                 })}
