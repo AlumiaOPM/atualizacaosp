@@ -1,15 +1,20 @@
 import React from 'react';
 
-import { 
-  ModalHeader, 
-  Modal, 
-  ModalBody, 
-  ModalFooter, 
+import {
+  ModalHeader,
+  Modal,
+  ModalBody,
+  ModalFooter,
   ModalOverlay,
   ModalCloseButton,
   Button,
   Input,
-  ModalContent } from '@chakra-ui/react';
+  FormControl,
+  ModalContent,
+  Slide,
+  Alert,
+  AlertIcon,
+} from '@chakra-ui/react';
 
 import HomeHeader from '../../components/HomeHeader';
 import HomeSearch from '../../components/HomeSearch';
@@ -20,15 +25,22 @@ import { getCourseDataAndThumbnails } from '../../services/api';
 
 export default function Home() {
   const [courses, setCourses] = React.useState([]);
-  const [loading, setIsLoading] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
-  const [modalCourse, setModalCourse] = React.useState('');
+  const [status, setStatus] = React.useState({success: false, failed: false})
+  const [loading, setIsLoading] = React.useState({
+    coursesRequest: true,
+    formSubmit: false
+  });
+  const [fields, setFields] = React.useState({
+    coursename: '',
+    email: '',
+  });
 
   React.useEffect(() => {
     async function getData() {
       const data = await getCourseDataAndThumbnails();
       setCourses(data);
-      setIsLoading(true);
+      setIsLoading({ ...loading, coursesRequest: false });
     };
 
     getData();
@@ -49,13 +61,60 @@ export default function Home() {
 
   const onClose = event => {
     setIsOpen(false);
+    setFields({ ...fields, error: '' })
   }
 
-  const openPopup = (course) => {
-    setModalCourse(String(course));
+  const openPopup = course => {
+    setFields({ ...fields, coursename: course })
     setIsOpen(true);
   }
 
+  const handleSubmit = async event => {
+    //loading ...
+    setIsLoading({ ...loading, formSubmit: true })
+
+    event.preventDefault();
+    const { email, coursename } = fields;
+    const payload = {
+      "submittedAt": Date.now(),
+      "fields": [
+        {
+          "name": "email",
+          "value": email,
+        },
+        {
+          "name": "nome_do_curso",
+          "value": coursename,
+        }
+      ]
+    }
+
+    try {
+      const response = await fetch("https://api.hsforms.com/submissions/v3/integration/submit/6331207/01c7043a-2ca4-4506-b882-fbd00113ff4c", {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload),
+      })
+
+      if (response.ok) {
+        setStatus({ success: true, failed: false });
+        setIsLoading({ ...loading, formSubmit: false });
+        return setIsOpen(false);
+      } else {
+        console.log(response)
+        setLoading({ ...loading, formSubmit: false });
+        setStatus({ success: false, failed: true })
+        return setIsOpen(false);
+      }
+    } catch (error) {
+      console.log(error)
+      setLoading({ ...loading, formSubmit: false });
+      setStatus({ success: false, failed: true })
+      return setIsOpen(false);
+    }
+  }
 
   return (
 
@@ -64,24 +123,39 @@ export default function Home() {
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>
-            <p>Avise-me:</p>
-            <p style={{fontWeight:'500', fontSize:'14px', lineHeight:'20px', marginBottom:'-10px'}}>{modalCourse}</p>
+            <p>Próxima turma:</p>
+            <p style={{
+              fontWeight: '500',
+              fontSize: '14px',
+              lineHeight: '20px',
+              marginBottom: '-10px'
+            }}>{fields.coursename}</p>
           </ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
-            <Input placeholder="email@example.com" type="email" required/>
-          </ModalBody>
-          <ModalFooter>
-            <Button 
-              colorScheme="green" 
-              mr={3} 
-              onClick={onClose}
-              type="submit"
-            >
-              Enviar
+
+          <form onSubmit={handleSubmit}>
+            <ModalBody>
+              <FormControl isRequired>
+                <Input
+                  placeholder="email@example.com"
+                  type="email"
+                  onChange={e => setFields({ ...fields, email: e.target.value })}
+                />
+              </FormControl>
+            </ModalBody>
+            <ModalFooter>
+              <Button
+                colorScheme="green"
+                mr={3}
+                type="submit"
+                isLoading={loading.formSubmit}
+              >
+                Avise-me
             </Button>
-            <Button variant="ghost" onClick={onClose}>Fechar</Button>
-          </ModalFooter>
+              <Button variant="ghost" onClick={onClose}>Fechar</Button>
+            </ModalFooter>
+          </form>
+
         </ModalContent>
       </Modal>
 
@@ -91,32 +165,43 @@ export default function Home() {
         title="Mais vendidos"
         data={courseFilter('mostSelled')}
         openPopup={openPopup}
-        isLoading={loading}
+        isLoading={loading.coursesRequest}
       />
       <HomeCollection
         title="Marketing"
         data={courseFilter('Marketing')}
         openPopup={openPopup}
-        isLoading={loading}
+        isLoading={loading.coursesRequest}
       />
       <HomeCollection
         title="Recursos Humanos"
         data={courseFilter('Recursos Humanos')}
         openPopup={openPopup}
-        isLoading={loading}
+        isLoading={loading.coursesRequest}
       />
       <HomeCollection
         title="Ciência de Dados"
         data={courseFilter('Ciência de Dados')}
         openPopup={openPopup}
-        isLoading={loading}
+        isLoading={loading.coursesRequest}
       />
       <HomeCollection
         title="Moda e Varejo"
         data={courseFilter('Moda e Varejo')}
         openPopup={openPopup}
-        isLoading={loading}
+        isLoading={loading.coursesRequest}
       />
+      <Slide 
+        direction="bottom" 
+        in={status.success} 
+        style={{ zIndex: 10}} 
+        onClick={() => setStatus({success: false, failed: false})}
+      >
+        <Alert status={"success"} colorScheme="green" variant="subtle" height="70px">
+          <AlertIcon />
+          Enviado com sucesso! Em nossa próxima turma, avisaremos você!
+        </Alert>
+      </Slide>
       <HomeFooter />
     </div>
 

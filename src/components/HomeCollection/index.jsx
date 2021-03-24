@@ -35,7 +35,7 @@ export default function HomeCollection({ data, title, isLoading, openPopup }) {
             </h2>
             <AccordionPanel pb={0} style={{padding: '0px 10px 0px 0px'}}>
               <div className="collection">
-                {!isLoading && [1, 2, 3, 4, 5, 6].map(item => <CardSkeleton />)}
+                {isLoading === true && [1, 2, 3, 4, 5, 6].map(item => <CardSkeleton />)}
                 {data && data.map((item, index) => {
                   return (
                     <Card
