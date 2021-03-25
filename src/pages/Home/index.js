@@ -72,7 +72,7 @@ export default function Home() {
       coursename: coursename,
       inicio: startDate,
       curso: courseCode,
-      url: window.parent.location.href || window.location.href;
+      url: window.parent.location.href || window.location.href,
     })
 
     console.log(fields);
