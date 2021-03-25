@@ -46,6 +46,7 @@ export default function HomeCollection({ data, title, isLoading, openPopup }) {
                       key={index}
                       expired={item[8] === "TRUE"}
                       openPopup={openPopup}
+                      courseCode={item[0]}
                     />
                   )
                 })}

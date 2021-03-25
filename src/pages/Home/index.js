@@ -26,14 +26,16 @@ import { getCourseDataAndThumbnails } from '../../services/api';
 export default function Home() {
   const [courses, setCourses] = React.useState([]);
   const [isOpen, setIsOpen] = React.useState(false);
-  const [status, setStatus] = React.useState({success: false, failed: false})
+  const [status, setStatus] = React.useState({ success: false, failed: false })
   const [loading, setIsLoading] = React.useState({
     coursesRequest: true,
     formSubmit: false
   });
   const [fields, setFields] = React.useState({
+    error: false,
     coursename: '',
     email: '',
+    inicio: '',
   });
 
   React.useEffect(() => {
@@ -64,9 +66,17 @@ export default function Home() {
     setFields({ ...fields, error: '' })
   }
 
-  const openPopup = course => {
-    setFields({ ...fields, coursename: course })
-    setIsOpen(true);
+  const openPopup = (coursename, startDate, courseCode) => {
+    setFields({
+      ...fields,
+      coursename: coursename,
+      inicio: startDate,
+      curso: courseCode,
+      url: window.location.href
+    })
+
+    console.log(fields);
+    return setIsOpen(true);
   }
 
   const handleSubmit = async event => {
@@ -74,7 +84,7 @@ export default function Home() {
     setIsLoading({ ...loading, formSubmit: true })
 
     event.preventDefault();
-    const { email, coursename } = fields;
+    const { email, coursename, curso, url, inicio } = fields;
     const payload = {
       "submittedAt": Date.now(),
       "fields": [
@@ -85,6 +95,18 @@ export default function Home() {
         {
           "name": "nome_do_curso",
           "value": coursename,
+        },
+        {
+          "name": "curso",
+          "value": curso,
+        },
+        {
+          "name": "inicio_curso",
+          "value": inicio,
+        },
+        {
+          "name": "website",
+          "value": url,
         }
       ]
     }
@@ -191,11 +213,11 @@ export default function Home() {
         openPopup={openPopup}
         isLoading={loading.coursesRequest}
       />
-      <Slide 
-        direction="bottom" 
-        in={status.success} 
-        style={{ zIndex: 10}} 
-        onClick={() => setStatus({success: false, failed: false})}
+      <Slide
+        direction="bottom"
+        in={status.success}
+        style={{ zIndex: 10 }}
+        onClick={() => setStatus({ success: false, failed: false })}
       >
         <Alert status={"success"} colorScheme="green" variant="subtle" height="70px">
           <AlertIcon />
