@@ -75,7 +75,6 @@ export default function Home() {
       url: "https://atualizacaosp.espm.br/",
     })
 
-    console.log(fields);
     return setIsOpen(true);
   }
 
