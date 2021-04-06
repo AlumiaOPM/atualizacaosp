@@ -14,9 +14,9 @@ import {
 
 import './index.css';
 
-export default function HomeCollection({ data, title, isLoading, openPopup }) {
+export default function HomeCollection({ data, title, isLoading, openPopup, headerLink }) {
   return (
-    <div className="homeCollection">
+    <div className="homeCollection" id={headerLink}>
       <Provider>
 
         <Accordion

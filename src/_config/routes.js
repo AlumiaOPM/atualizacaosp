@@ -47,9 +47,9 @@ export default function Routes(props) {
 				<Suspense fallback={Holder}>
 
 					<Route component={Home} exact path="/" />
+					<Route component={Curso} exact path="/:slug" />
 					<Route component={listCursos} exact path="/Cursos" />
 					<Route component={ListProfessores} exact path="/Professores" />
-					<Route component={Curso} exact path="/Curso/:nome" />
 					<Route component={Professor} exact path="/Prof/:nome" />
 					<Route component={ThankyouPage} exact path="/Obrigado" />
 					<Route component={WebnarTmp01} path="/webinar-o-papel-do-psicopedagogo-na-escola-e-na-clinica/" exact />

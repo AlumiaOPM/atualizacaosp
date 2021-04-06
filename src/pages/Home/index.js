@@ -67,6 +67,7 @@ export default function Home() {
   }
 
   const openPopup = (coursename, startDate, courseCode) => {
+    //TODO dinamic URL
     setFields({
       ...fields,
       coursename: coursename,
@@ -191,24 +192,28 @@ export default function Home() {
       <HomeCollection
         title="Marketing"
         data={courseFilter('Marketing')}
+        headerLink="marketing"
         openPopup={openPopup}
         isLoading={loading.coursesRequest}
       />
       <HomeCollection
         title="Recursos Humanos"
         data={courseFilter('Recursos Humanos')}
+        headerLink="recursos-humanos"
         openPopup={openPopup}
         isLoading={loading.coursesRequest}
       />
       <HomeCollection
         title="Ciência de Dados"
         data={courseFilter('Ciência de Dados')}
+        headerLink="ciencia-de-dados"
         openPopup={openPopup}
         isLoading={loading.coursesRequest}
       />
       <HomeCollection
         title="Moda e Varejo"
         data={courseFilter('Moda e Varejo')}
+        headerLink="moda-e-varejo"
         openPopup={openPopup}
         isLoading={loading.coursesRequest}
       />

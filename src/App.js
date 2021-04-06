@@ -24,7 +24,7 @@ function App() {
     },
     colors: {
       green: {
-        500: '#2D8C42',
+        500: '#009966',
       },
       gray: {
         500: '#EDEDED'
