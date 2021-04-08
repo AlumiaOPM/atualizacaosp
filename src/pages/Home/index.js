@@ -190,33 +190,48 @@ export default function Home() {
         isLoading={loading.coursesRequest}
       />
       <HomeCollection
-        title="Marketing"
-        data={courseFilter('Marketing')}
-        headerLink="marketing"
+        title="Comunicação e Marketing"
+        data={courseFilter('Comunicação e Marketing')}
+        headerLink="comunicacao-e-marketing"
         openPopup={openPopup}
         isLoading={loading.coursesRequest}
       />
       <HomeCollection
-        title="Recursos Humanos"
-        data={courseFilter('Recursos Humanos')}
-        headerLink="recursos-humanos"
+        title="Gestão de Pessoas"
+        data={courseFilter('Gestão de Pessoas')}
+        headerLink="gestao-de-pessoas"
         openPopup={openPopup}
         isLoading={loading.coursesRequest}
       />
       <HomeCollection
-        title="Ciência de Dados"
-        data={courseFilter('Ciência de Dados')}
-        headerLink="ciencia-de-dados"
+        title="Negócios"
+        data={courseFilter('Negócios')}
+        headerLink="negocios"
         openPopup={openPopup}
         isLoading={loading.coursesRequest}
       />
       <HomeCollection
-        title="Moda e Varejo"
-        data={courseFilter('Moda e Varejo')}
-        headerLink="moda-e-varejo"
+        title="Marketing Digital"
+        data={courseFilter('Marketing Digital')}
+        headerLink="marketing-digital"
         openPopup={openPopup}
         isLoading={loading.coursesRequest}
       />
+      <HomeCollection
+        title="Vendas & Engajamento"
+        data={courseFilter('Vendas & Engajamento')}
+        headerLink="vendas-e-engajamento"
+        openPopup={openPopup}
+        isLoading={loading.coursesRequest}
+      />
+      <HomeCollection
+        title="Desenvolvimento Pessoal"
+        data={courseFilter('Desenvolvimento Pessoal')}
+        headerLink="desenvolvimento-pessoal"
+        openPopup={openPopup}
+        isLoading={loading.coursesRequest}
+      />
+
       <Slide
         direction="bottom"
         in={status.success}

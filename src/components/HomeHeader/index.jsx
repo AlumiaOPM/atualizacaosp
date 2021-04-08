@@ -14,10 +14,12 @@ export default function HeaderHome() {
               <img src="../img/logo.jpg" alt="logo" />
             </div>
             <nav className="nav">
-              <a href="#marketing">Marketing</a>
-              <a href="#recursos-humanos">Recursos Humanos</a>
-              <a href="#ciencia-de-dados">Ciência de Dados</a>
-              <a href="#moda-e-varejo">Moda e Varejo</a>
+              <a href="#comunicaca-e-marketing">Comunicação e Marketing</a>
+              <a href="#gestao-de-pessoas">Gestão de Pessoas</a>
+              <a href="#negocios">Negócios</a>
+              <a href="#marketing-digital">Marketing Digital</a>
+              <a href="#vendas-e-engajamento">Vendas & Engajamento</a>
+              <a href="#desenvolvimento-pessoal">Desenvolvimento Pessoal</a>
             </nav>
           </div>
         </div>
