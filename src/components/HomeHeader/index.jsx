@@ -14,7 +14,7 @@ export default function HeaderHome() {
               <img src="../img/logo.jpg" alt="logo" />
             </div>
             <nav className="nav">
-              <a href="#comunicaca-e-marketing">Comunicação e Marketing</a>
+              <a href="#comunicacao-e-marketing">Comunicação e Marketing</a>
               <a href="#gestao-de-pessoas">Gestão de Pessoas</a>
               <a href="#negocios">Negócios</a>
               <a href="#marketing-digital">Marketing Digital</a>

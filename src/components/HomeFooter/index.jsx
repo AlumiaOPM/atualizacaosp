@@ -16,14 +16,12 @@ export default function HomeFooter() {
             <div className="item">
               <ul>
                 <li><p>NOSSOS CURSOS</p></li>
-                <li><a href="#">Comercial</a></li>
-                <li><a href="#">Recursos Humanos</a></li>
-                <li><a href="#">Marketing</a></li>
-                <li><a href="#">Metodologias Ágeis</a></li>
-                <li><a href="#">Ciência de Dados</a></li>
-                <li><a href="#">Desenvolvimento Pessoal</a></li>
-                <li><a href="#">Moda e Varejo</a></li>
-                <li><a href="#">Empreendedorismo</a></li>
+                <li><a href="#comunicacao-e-marketing">Comunicação e Marketing</a></li>
+                <li><a href="#gestao-de-pessoas">Gestão de Pessoas</a></li>
+                <li><a href="#negocios">Negócios</a></li>
+                <li><a href="#marketing-digital">Marketing Digital</a></li>
+                <li><a href="#vendas-e-engajamento">Vendas & Engajamento</a></li>
+                <li><a href="#desenvolvimento-pessoal">Desenvolvimento Pessoal</a></li>
               </ul>
             </div>
           </div>

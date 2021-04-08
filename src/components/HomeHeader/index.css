@@ -30,11 +30,11 @@
 }
 
 .headerHome .row:first-child .head .nav a {
-  margin: 0px 10px;
   color: #f1f1f1;
   text-align: center;
   word-wrap: normal;
   font-size: 16px;
+  width: 140px;
 }
 
 .headerHome .row:first-child .head .nav a:hover {
