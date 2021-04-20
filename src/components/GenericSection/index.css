@@ -1,0 +1,38 @@
+.generic-section {
+  width: 60%;
+  padding: 40px 0px;
+}
+
+.generic-section h3 {
+  font-weight: 600;
+  font-size: 34px;
+  margin: 40px auto;
+}
+
+.generic-section .content p {
+  margin: 20px auto;
+  font-size: 16px;
+}
+
+.generic-section .content ul {
+  margin-left: 40px;
+}
+
+.generic-section .content ul li {
+  margin: 10px auto;
+}
+
+.generic-section .content div {
+  margin: 40px auto;
+}
+
+@media screen and (max-width: 800px){
+  .generic-section {
+    padding: 40px 10px;
+    width: 100%;
+  }
+
+  .generic-section .content ul {
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,44 @@
+.discount-banner {
+  padding: 20px 0px;
+}
+
+.discount-banner .discount-container {
+  margin: 0px auto;
+  background: #186FA6;
+  width: 90%;
+  padding: 40px 26px;
+  text-align: center;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.discount-banner .discount-container h3 {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 10px auto;
+}
+
+.discount-banner .discount-container p {
+  margin: 20px auto;
+}
+
+.discount-banner .discount-container p:last-child {
+  border-top: 1px dashed #fff;
+  padding-top: 20px;
+}
+
+.discount-banner .discount-cta {
+  max-width: 340px;  
+  margin: 56px auto;
+}
+
+@media screen and (max-width: 767px){
+  .discount-banner {
+    padding: 10px;
+  }
+
+  .discount-banner .discount-container {
+    width: 100%;
+    padding: 20px 10px;
+  }
+}

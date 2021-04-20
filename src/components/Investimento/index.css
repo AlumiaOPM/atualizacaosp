@@ -1,0 +1,44 @@
+.investimento-flexSection {
+  display: grid;
+  place-items: center;
+  padding: 20px 0px;
+}
+
+.investimento-flexSection h3 {
+  font-size: 34px;
+  margin: 20px auto;
+  text-align: center;
+  font-weight: 300;
+}
+
+.investimento-container {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  width: 350px;
+  overflow: hidden;
+}
+
+.investimento-container p {
+  padding: 20px;
+  text-align: center;
+  color: #a3a3a3;
+}
+
+.investimento-container p:last-child {
+  text-transform: uppercase;
+}
+
+.background-gray {
+  background: #EEEEEE;
+}
+
+.background-black {
+  background: #111;
+  font-size: 18px;
+  color: #fff !important;
+}
+
+.investimento-cta {
+  max-width: 340px;
+  margin: 56px auto;
+}

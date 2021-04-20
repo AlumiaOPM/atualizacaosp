@@ -9,7 +9,7 @@ function App() {
   const theme = extendTheme({
     styles: {
       global: {
-        body:{
+        body: {
           fontFamily: "Montserrat",
           color: "#5b5b5b"
         }

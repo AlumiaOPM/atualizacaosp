@@ -1,5 +1,6 @@
 import React from 'react';
 import Provider from '../Provider';
+import logo from '../../assets/logo.jpg';
 
 import './index.css';
 
@@ -11,7 +12,7 @@ export default function HeaderHome() {
         <div className="row">
           <div className="head">
             <div className="logo">
-              <img src="../img/logo.jpg" alt="logo" />
+              <img src={logo} alt="logo" />
             </div>
             <nav className="nav">
               <a href="#comunicacao-e-marketing">Comunicação e Marketing</a>
