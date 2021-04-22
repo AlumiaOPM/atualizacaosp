@@ -6,7 +6,7 @@ import Provider from '../Provider';
 
 import './index.css';
 
-export default function DiscountBanner({ cartLink }) {
+export default function DiscountBanner({ cartLink, handleModalOpen }) {
   return (
     <div className="discount-banner">
       <Provider>
@@ -18,19 +18,18 @@ export default function DiscountBanner({ cartLink }) {
 
         </div>
 
+        <p style={{
+          margin: "40px auto -40px auto",
+          textAlign: "center"
+        }}>Dúvidas? Converse com um de nossos consultores!</p>
         <div className="discount-cta">
-          <p style={{margin: "20px auto"}}>Dúvidas? Converse com um de nossos consultores!</p>
-          <Link isExternal href={cartLink}>
-            <Button
-              colorScheme="green"
-              width="100%"
-              height="54px"
-              variant="solid"
-            >
-              INSCREVER-SE
-              <ExternalLinkIcon marginLeft="2" />
-            </Button>
-          </Link>
+          <Button
+            colorScheme="green"
+            size="lg"
+            width="100%"
+            height="54px"
+            onClick={handleModalOpen}
+          >SAIBA MAIS</Button>
         </div>
 
       </Provider>

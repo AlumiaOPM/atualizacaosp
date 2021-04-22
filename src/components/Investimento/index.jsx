@@ -25,7 +25,11 @@ export default function Investimento({ valor, cartLink }) {
               <p className="background-gray">Boleto</p>
               <p>{valor}</p>
               <p className="background-gray">Cartão de crédito</p>
-              <p>Em até 10X <strong>R$ {Number(semCifrao) / 10},00</strong></p>
+              <p>Em até 10X 
+                <strong style={{marginLeft: '4px'}}>
+                  R$ {((Number(semCifrao) / 10).toFixed(2)).replace('.', ',')}
+                </strong>
+              </p>
             </div>
           </div>
         </div>
