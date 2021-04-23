@@ -1,10 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-
-//Custom Hook
-function useQuery() {
-	return new URLSearchParams(useLocation().search);
-};
+import { useQuery } from '../../hooks/';
 
 const NotFound = (props) => {
 	const query = useQuery();
