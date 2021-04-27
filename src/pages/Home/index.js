@@ -20,6 +20,7 @@ import HomeHeader from '../../components/HomeHeader';
 import HomeSearch from '../../components/HomeSearch';
 import HomeCollection from '../../components/HomeCollection';
 import HomeFooter from '../../components/HomeFooter';
+import LGPDDrawer from '../../components/LGPDDrawer';
 
 import { getCourseDataAndThumbnails } from '../../services/api';
 
@@ -231,6 +232,7 @@ export default function Home() {
         openPopup={openPopup}
         isLoading={loading.coursesRequest}
       />
+      <LGPDDrawer />
 
       <Slide
         direction="bottom"

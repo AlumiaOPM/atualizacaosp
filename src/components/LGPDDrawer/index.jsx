@@ -26,7 +26,6 @@ export default function LGPDDrawer() {
 
   React.useEffect(() => {
     const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
-    console.log(document.cookie)
     if (shouldShowPopup)
       setIsDrawerVisible(shouldShowPopup);
 
@@ -44,15 +43,15 @@ export default function LGPDDrawer() {
       style={{ transform: `translateY(${isDrawerVisible ? '0%' : '150%'})` }}
     >
       <Provider>
-        <div className="flexSection">
+        <div className="lgpd-flexSection">
 
-          <div className="flexItem">
+          <div className="lgpd-flexItem">
             <p>
               Usamos cookies para armazenar informações sobre como você usa o nosso site e as páginas que visita. Tudo para tornar sua experiência a mais agradável possível. Para entender os tipos de cookies que utilizamos, acesse nossa <Link href="/politica-de-cookies" isExternal color="green">política de cookies<ExternalLinkIcon mx="2px" /></Link>. Ao clicar em Eu concordo, você consente com a utilização de cookies.
             </p>
           </div>
 
-          <div className="flexItem">
+          <div className="lgpd-flexItem">
             <Button 
               colorScheme="green"
               onClick={handleClick}

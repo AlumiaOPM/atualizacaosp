@@ -6,9 +6,9 @@ import Provider from '../../components/Provider';
 
 import './index.css';
 
-export default function QuandoAcontece({ iniciopt1, iniciopt2 }) {
+export default function QuandoAcontece({ iniciopt1, iniciopt2, sectionId }) {
   return (
-    <div className="quando-acontece">
+    <div className="quando-acontece" id={sectionId}>
       <Provider>
 
         <div className="quando-acontece-flexSection">

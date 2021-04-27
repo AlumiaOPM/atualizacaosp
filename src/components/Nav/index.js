@@ -33,10 +33,10 @@ export default function HeaderHome({
               <img src={"../img/logo.jpg"} alt="logo" />
             </div>
             <nav className="nav">
-              <a href="#">Sobre a formação</a>
-              <a href="#">O Programa</a>
-              <a href="#">Quando acontece</a>
-              <a href="#">Investimento</a>
+              <a href="#sobre-a-formacao">Sobre a formação</a>
+              <a href="#programa">O Programa</a>
+              <a href="#quando-acontece">Quando acontece</a>
+              <a href="#investimento">Investimento</a>
             </nav>
           </div>
         </div>

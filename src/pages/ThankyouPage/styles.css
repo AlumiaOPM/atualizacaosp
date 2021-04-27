@@ -2,8 +2,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: var(--primary-color);
-  min-height: 84vh;
+  background: url('../../assets/bg-desktop.jpg');
+  background-size: cover;
+  min-height: 100vh;
   margin: 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -11,6 +12,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-repeat: no-repeat;
+}
+
+#thankyou-page:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: radial-gradient(transparent, rgba(0,0,0,0.3) 80%);
+  z-index: 9;
 }
 
 #thankyou-page .thankyou-page-container {
@@ -22,14 +36,18 @@
 }
 
 #thankyou-page h2{
-  color: var(--text-color-light);
+  color: #f1f1f1;
   font-size: 3rem;
+  position: relative;
+  z-index: 10;
 }
 
 #thankyou-page p{
   margin: 20px auto;
   font-size: 1.2rem;
-  color: var(--text-color-light);
+  color: #f1f1f1;
+  position: relative;
+  z-index: 10;
 }
 
 #thankyou-page .button {

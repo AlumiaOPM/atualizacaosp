@@ -3,7 +3,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Home from '../pages/Home';
 import Course from '../pages/Course';
+import CourseNew from '../pages/CourseNew';
 import NotFound from '../pages/NotFound';
+
+import ThankyouPage from '../pages/ThankyouPage';
 
 export default function Routes() {
 	return (
@@ -18,6 +21,14 @@ export default function Routes() {
 
 				<Route exact path="/:slug">
 					<Course />
+				</Route>
+				
+				<Route exact path="/new/:slug">
+					<CourseNew />
+				</Route>
+
+				<Route exact path="/obrigado/:slug">
+					<ThankyouPage />
 				</Route>
 
 			</Switch>

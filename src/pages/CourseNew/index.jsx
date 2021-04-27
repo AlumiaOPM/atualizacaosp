@@ -19,7 +19,6 @@
 //data[0][17] - Para quem se destina
 //data[0][18] - Programa do curso
 //data[0][19] - O que você vai aprender
-//data[0][20] - formId
 
 "use-strict";
 
@@ -34,7 +33,6 @@ import QuandoAcontece from '../../components/QuandoAcontece';
 import Investimento from '../../components/Investimento';
 import DiscountBanner from '../../components/DiscountBanner';
 import Footer from '../../components/Footer';
-import LGPDDrawer from '../../components/LGPDDrawer';
 
 import {
   ModalHeader,
@@ -59,9 +57,9 @@ export default function Course(props) {
   const [isOpen, setisOpen] = React.useState(false);
   const [fields, setFields] = React.useState({
     error: false,
-    nome_completo: '',
+    name: '',
     email: '',
-    mobilephone: '',
+    phone: '',
   });
 
   React.useEffect(() => {
@@ -85,55 +83,8 @@ export default function Course(props) {
     setisOpen(false);
   };
 
-  const handleSubmit = async event => {
-    setSubmitLoading(true);
-    event.preventDefault();
-
-    const payload = {
-      "submittedAt": Date.now(),
-      "fields": [
-        {
-          "name": "nome_completo",
-          "value": fields.nome_completo,
-        },
-        {
-          "name": "email",
-          "value": fields.email,
-        },
-        {
-          "name": "mobilephone",
-          "value": fields.mobilephone,
-        }
-      ]
-    }
-
-    try {
-      const url = data[0] && `https://api.hsforms.com/submissions/v3/integration/submit/6331207/${data[0][20]}` || false;
-
-      if (!url)
-        throw new Error("handleSubmit() -> Fetch error: no URL param");
-
-      const response = await fetch(url, {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload),
-      })
-
-      if (response.ok) {
-        console.log(event);
-        setSubmitLoading(false);
-        return history.push(`/obrigado/${data[0][12]}`);
-      } else {
-        console.log(response);
-        return setSubmitLoading(false);
-      }
-    } catch (error) {
-      console.log(error)
-      return setSubmitLoading(false);
-    }
-
+  const handleSubmit = event => {
+    console.log(event);
   };
 
   const handleModalOpen = event => {
@@ -163,7 +114,7 @@ export default function Course(props) {
                   <Input
                     placeholder="Nome completo"
                     type="text"
-                    onChange={e => setFields({ ...fields, nome_completo: e.target.value })}
+                    onChange={e => setFields({ ...fields, name: e.target.value })}
                   />
                 </FormControl>
                 <FormControl isRequired>
@@ -177,7 +128,7 @@ export default function Course(props) {
                   <Input
                     placeholder="DDD e telefone"
                     type="tel"
-                    onChange={e => setFields({ ...fields, mobilephone: e.target.value })}
+                    onChange={e => setFields({ ...fields, phone: e.target.value })}
                   />
                 </FormControl>
               </Stack>
@@ -211,12 +162,12 @@ export default function Course(props) {
         cartLink={cartLink}
       />
 
+      <p>Novo curso</p>
+
       {data &&
         <CourseInformation
           hero={data[0] && data[0][7]}
           cartLink={cartLink}
-          inicioPt2={data[0] && data[0][3]}
-          sectionId="sobre-a-formacao"
         />
       }
 
@@ -253,7 +204,6 @@ export default function Course(props) {
           content={data[0] && data[0][18]}
           background="#A134B1"
           color="light"
-          sectionId="programa"
         />
       }
 
@@ -261,7 +211,6 @@ export default function Course(props) {
         <QuandoAcontece
           iniciopt1={data[0] && data[0][2]}
           iniciopt2={data[0] && data[0][3]}
-          sectionId="quando-acontece"
         />
       }
 
@@ -269,7 +218,6 @@ export default function Course(props) {
         <Investimento
           valor={data[0] && data[0][14]}
           cartLink={cartLink}
-          sectionId="investimento"
         />
       }
 
@@ -282,8 +230,6 @@ export default function Course(props) {
       <Footer
         courseName={data[0] && data[0][9]}
       />
-
-      <LGPDDrawer />
     </div>
   )
 }

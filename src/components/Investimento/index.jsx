@@ -6,7 +6,7 @@ import Provider from '../../components/Provider';
 
 import './index.css';
 
-export default function Investimento({ valor, cartLink }) {
+export default function Investimento({ valor, cartLink, sectionId }) {
   const semCifrao =
     valor && valor
       .replace('R$ ', '')
@@ -14,7 +14,7 @@ export default function Investimento({ valor, cartLink }) {
       .replace(',', '.')
 
   return (
-    <div className="investimento">
+    <div className="investimento" id={sectionId}>
       <Provider>
 
         <div className="investimento-flexSection">

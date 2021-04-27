@@ -4,9 +4,10 @@ import Provider from '../Provider';
 
 import './index.css';
 
-export default function GenericSection({ background, title, content, color }) {
+export default function GenericSection({ background, title, content, color, sectionId }) {
   return (
     <div
+      id={sectionId || null}
       style={{
         background: background,
         color: `${color === "dark" ? '#A3A3A3' : '#fff'}`,
