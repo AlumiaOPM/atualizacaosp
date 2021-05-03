@@ -1,6 +1,5 @@
 import React from 'react'
 import Routes from './_config/routes';
-import { TinaProvider, TinaCMS } from 'tinacms';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 
 import './App.css';
@@ -32,17 +31,11 @@ function App() {
     }
   })
 
-  const cms = new TinaCMS({
-    sidebar: true,
-  })
-
   return (
     <div>
-      <TinaProvider cms={cms}>
-        <ChakraProvider resetCSS theme={theme}>
-          <Routes />
-        </ChakraProvider>
-      </TinaProvider>
+      <ChakraProvider resetCSS theme={theme}>
+        <Routes />
+      </ChakraProvider>
     </div>
   )
 }
