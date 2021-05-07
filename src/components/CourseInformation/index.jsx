@@ -43,7 +43,7 @@ export default function CourseInformation({ hero, cartLink, inicioPt2, sectionId
               <p>Aulas: ao vivo por webconferência <br/> <small>{inicioPt2}</small></p>
             </li>
             <li>
-              <img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://atualizacaosp.espm.br/wp-content/uploads/2021/04/price.png" />
+              <img src="https://dfr8jhnpezfnn.cloudfront.net/ESPM-ATU/price+(1).png" />
               <div>
                 <p>Formas de Pagamento</p> <small>*À vista no boleto ou em até 10x sem juros no cartão de crédito.</small>
               </div>
