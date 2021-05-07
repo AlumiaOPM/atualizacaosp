@@ -93,7 +93,7 @@ export default function Course(props) {
       "submittedAt": Date.now(),
       "fields": [
         {
-          "name": "nome_completo",
+          "name": "firstname",
           "value": fields.nome_completo,
         },
         {
