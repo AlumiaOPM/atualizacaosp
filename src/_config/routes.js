@@ -22,13 +22,17 @@ export default function Routes() {
 				<Route exact path="/:slug">
 					<Course />
 				</Route>
-				
+
 				<Route exact path="/new/:slug">
 					<CourseNew />
 				</Route>
 
 				<Route exact path="/obrigado/:slug">
 					<ThankyouPage />
+				</Route>
+
+				<Route exact path="/cursos/extensao/cursos-de-atualizacao/:slug">
+					<Course />
 				</Route>
 
 			</Switch>

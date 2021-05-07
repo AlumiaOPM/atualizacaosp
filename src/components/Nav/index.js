@@ -11,6 +11,8 @@ import { IconContext } from 'react-icons';
 import { FaRegCalendarAlt, FaRegClock } from 'react-icons/fa';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
+import logo from '../../assets/logo.jpg';
+
 import './index.css';
 
 export default function HeaderHome({
@@ -30,7 +32,7 @@ export default function HeaderHome({
         <div className="row">
           <div className="course-head">
             <div className="logo">
-              <img src={"../img/logo.jpg"} alt="logo" />
+              <img src={logo} alt="logo" />
             </div>
             <nav className="nav">
               <a href="#sobre-a-formacao">Sobre a formação</a>
