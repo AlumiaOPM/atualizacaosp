@@ -103,6 +103,10 @@ export default function Course(props) {
         {
           "name": "mobilephone",
           "value": fields.mobilephone,
+        },
+        {
+          "name": "website",
+          "value": window.location.href
         }
       ]
     }
