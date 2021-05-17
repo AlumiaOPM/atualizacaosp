@@ -67,7 +67,7 @@
 .inicio p {
   margin-right: 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   width: 180px;
   color: #f1f1f1;
