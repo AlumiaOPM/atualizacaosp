@@ -26,13 +26,14 @@ import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { getCourseDataAndThumbnails } from '../../services/api';
 
-import Nav from '../../components/Nav';
-import CourseInformation from '../../components/CourseInformation';
-import GenericSection from '../../components/GenericSection';
-import QuandoAcontece from '../../components/QuandoAcontece';
+import NavNew from '../../components/NavNew';
+import CourseInformationNew from '../../components/CourseInformationNew';
+import GenericSectionNew from '../../components/GenericSectionNew';
+import ParaQuemSeDestina from '../../components/ParaQuemSeDestina';
+import QuandoAconteceNew from '../../components/QuandoAconteceNew';
 import Investimento from '../../components/Investimento';
-import DiscountBanner from '../../components/DiscountBanner';
-import Footer from '../../components/Footer';
+import DiscountBannerNew from '../../components/DiscountBannerNew';
+import FooterNew from '../../components/FooterNew';
 
 import {
   ModalHeader,
@@ -152,7 +153,7 @@ export default function Course(props) {
         </ModalContent>
       </Modal>
 
-      <Nav
+      <NavNew
         loading={loading}
         courseTitle={data[0] && data[0][9]}
         cargaHoraria={data[0] && data[0][13]}
@@ -162,53 +163,37 @@ export default function Course(props) {
         cartLink={cartLink}
       />
 
-      <p>Novo curso</p>
-
       {data &&
-        <CourseInformation
+        <CourseInformationNew
           hero={data[0] && data[0][7]}
           cartLink={cartLink}
+          inicioPt2={data[0] && data[0][3]}
+          sectionId="sobre-a-formacao"
         />
       }
 
       {data &&
-        <GenericSection
+        <GenericSectionNew
           title="Objetivo do curso"
           content={data[0] && data[0][16]}
-          background="#fff"
-          color="dark"
         />
       }
 
       {data &&
-        <GenericSection
-          title="Para quem se destina?"
+        <ParaQuemSeDestina 
           content={data[0] && data[0][17]}
-          background="#828282"
-          color="light"
         />
       }
 
-      {(data && data[0] && data[0][19] !== "FALSE") &&
-        <GenericSection
+      {data &&
+        <GenericSectionNew
           title="O que você vai aprender?"
-          content={data[0][19]}
-          background="#20549F"
-          color="light"
-        />
-      }
-
-      {data &&
-        <GenericSection
-          title="Programa do curso"
           content={data[0] && data[0][18]}
-          background="#A134B1"
-          color="light"
         />
       }
 
       {data &&
-        <QuandoAcontece
+        <QuandoAconteceNew
           iniciopt1={data[0] && data[0][2]}
           iniciopt2={data[0] && data[0][3]}
         />
@@ -222,12 +207,12 @@ export default function Course(props) {
       }
 
       {data &&
-        <DiscountBanner
+        <DiscountBannerNew
           cartLink={cartLink}
           handleModalOpen={handleModalOpen}
         />
       }
-      <Footer
+      <FooterNew
         courseName={data[0] && data[0][9]}
       />
     </div>

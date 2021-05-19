@@ -1,18 +1,22 @@
-.quando-acontece-old {
-  background: #636E72;
-  color: #fff;
+.quando-acontece {
+  background: #fff;
+  color: #111;
   padding: 40px 0px;
+  margin: 0 auto;
 }
 
 .quando-acontece-flexSection  {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
 .quando-acontece-flexSection h3 {
-  font-size: 34px;
+  font-size: 26px;
   margin: 20px auto;
+  font-family: "Heebo", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .quando-acontece-flexSection p {
@@ -21,6 +25,12 @@
 
 .quando-acontece-flexSection .quando-acontece-flexItem .calendar {
   margin-right: 20px;
+}
+
+.icone-calendar {
+  font-size: 72px;
+  color: #723090;
+  margin: 0px 40px;
 }
 
 @media screen and (max-width: 767px){

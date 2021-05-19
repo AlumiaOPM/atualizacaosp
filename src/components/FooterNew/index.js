@@ -1,12 +1,12 @@
 import Provider from '../Provider';
 
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo-new.png';
 
 import './styles.css';
 
 export default function Footer({ courseName }) {
   return (
-    <div className="home-footer-old">
+    <div className="home-footer">
       <Provider>
         <div className="row">
           <div className="logo">
@@ -38,7 +38,6 @@ export default function Footer({ courseName }) {
         </div>
 
         <div className="pos-footer">
-          <hr></hr>
           <div className="item">
             <p>© Copyright 2021</p>
             <p>ESPM - O inusitado em constante movimento</p>

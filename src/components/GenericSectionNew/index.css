@@ -1,0 +1,62 @@
+.generic-section {
+  width: 100%;
+  padding: 40px 0px;
+  color: #111;
+  display: flex;
+}
+
+.generic-section h3 {
+  font-weight: 700;
+  margin: 40px auto;
+  color: #111;
+  font-family: "Heebo", sans-serif;
+  text-transform: uppercase;
+  font-size: 3em;
+  width: 30%;
+  line-height: 1em;
+  position: relative;
+}
+
+.generic-section h3:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: #111;
+  left: 0;
+  top: -14px;
+}
+
+.generic-section .content {
+  width: 66%;
+  margin-top: 20px;
+}
+
+.generic-section .content p {
+  margin: 20px auto;
+  font-size: 16px;
+}
+
+.generic-section .content ul {
+  margin-left: 40px;
+}
+
+.generic-section .content ul li {
+  margin: 10px auto;
+}
+
+.generic-section .content div {
+  margin: 40px auto;
+}
+
+@media screen and (max-width: 800px){
+  .generic-section {
+    padding: 40px 10px;
+    width: 100%;
+  }
+
+  .generic-section .content ul {
+    margin-left: 20px;
+  }
+}

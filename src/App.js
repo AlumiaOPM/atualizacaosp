@@ -9,7 +9,7 @@ function App() {
     styles: {
       global: {
         body: {
-          fontFamily: "Montserrat",
+          fontFamily: "Open sans",
           color: "#5b5b5b"
         }
       }
@@ -25,8 +25,8 @@ function App() {
       green: {
         500: '#009966',
       },
-      gray: {
-        500: '#EDEDED'
+      black: {
+        500: '#111111'
       }
     }
   })

@@ -14,7 +14,7 @@ export default function GenericSection({ background, title, content, color, sect
       }}
     >
       <Provider>
-        <div className="generic-section">
+        <div className="generic-section-old">
 
           <h3 style={{color: `${color === "dark" ? '#727475' : '#fff'}`}}>{title}</h3>
           <div 

@@ -1,27 +1,17 @@
 import React from 'react';
-import { FaRegCalendarAlt } from 'react-icons/fa';
-import { IconContext } from 'react-icons';
 
-import Provider from '../../components/Provider';
+import Provider from '../Provider';
 
 import './index.css';
 
 export default function QuandoAcontece({ iniciopt1, iniciopt2, sectionId }) {
   return (
-    <div className="quando-acontece-old" id={sectionId}>
+    <div className="quando-acontece" id={sectionId}>
       <Provider>
 
         <div className="quando-acontece-flexSection">
           <div className="quando-acontece-flexItem">
-            <IconContext.Provider
-              value={{
-                color: "#FFF",
-                size: "80px",
-                className: "calendar"
-              }}
-            >
-              <FaRegCalendarAlt />
-            </IconContext.Provider>
+            <i aria-hidden="true" className="icone icone-calendar"></i>
           </div>
           <div className="quando-acontece-flexItem">
             <h3>Quando acontece?</h3>

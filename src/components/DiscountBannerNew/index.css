@@ -1,0 +1,57 @@
+.stamp {
+  margin-top: -1px;
+  display: flex;
+  justify-content: center;
+}
+
+.stamp-content {
+  border: 1px solid #111;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 50%;
+  border-left-style: dashed;
+  display: flex;
+}
+
+.stamp-content .stamp-discount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 50%;
+}
+
+.stamp-content .stamp-discount p {
+  font-weight: 800;
+  font-size: 20px;
+  color: #111;
+  text-transform: uppercase;
+  position: relative;
+  top: -20px;
+}
+
+.stamp-content .stamp-discount span {
+  font-size: 3em;
+  font-weight: 800;
+  position: relative;
+  top: 20px;
+}
+
+.stamp-before {
+  border: 1px solid #111;
+  width: 2%;
+  margin-right: -1px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-right: none;
+}
+
+.stamp-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #111;
+  padding: 40px 20px 40px 0px;
+}

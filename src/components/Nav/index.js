@@ -26,7 +26,7 @@ export default function HeaderHome({
 }) {
 
   return (
-    <div className="header-course">
+    <div className="header-course-old">
 
       <Provider>
         <div className="row">

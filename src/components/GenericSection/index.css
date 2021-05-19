@@ -1,38 +1,38 @@
-.generic-section {
+.generic-section-old {
   width: 60%;
   padding: 40px 0px;
 }
 
-.generic-section h3 {
+.generic-section-old h3 {
   font-weight: 600;
   font-size: 34px;
   margin: 40px auto;
 }
 
-.generic-section .content p {
+.generic-section-old .content p {
   margin: 20px auto;
   font-size: 16px;
 }
 
-.generic-section .content ul {
+.generic-section-old .content ul {
   margin-left: 40px;
 }
 
-.generic-section .content ul li {
+.generic-section-old .content ul li {
   margin: 10px auto;
 }
 
-.generic-section .content div {
+.generic-section-old .content div {
   margin: 40px auto;
 }
 
 @media screen and (max-width: 800px){
-  .generic-section {
+  .generic-section-old {
     padding: 40px 10px;
     width: 100%;
   }
 
-  .generic-section .content ul {
+  .generic-section-old .content ul {
     margin-left: 20px;
   }
 }

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, Link } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { Button } from '@chakra-ui/react';
 
 import Provider from '../Provider';
 
@@ -8,7 +7,7 @@ import './index.css';
 
 export default function DiscountBanner({ cartLink, handleModalOpen }) {
   return (
-    <div className="discount-banner">
+    <div className="discount-banner-old">
       <Provider>
 
         <div className="discount-container">

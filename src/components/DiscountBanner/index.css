@@ -1,8 +1,8 @@
-.discount-banner {
+.discount-banner-old {
   padding: 20px 0px;
 }
 
-.discount-banner .discount-container {
+.discount-banner-old .discount-container {
   margin: 0px auto;
   background: #186FA6;
   width: 90%;
@@ -12,32 +12,32 @@
   border-radius: 3px;
 }
 
-.discount-banner .discount-container h3 {
+.discount-banner-old .discount-container h3 {
   font-size: 34px;
   font-weight: 700;
   margin: 10px auto;
 }
 
-.discount-banner .discount-container p {
+.discount-banner-old .discount-container p {
   margin: 20px auto;
 }
 
-.discount-banner .discount-container p:last-child {
+.discount-banner-old .discount-container p:last-child {
   border-top: 1px dashed #fff;
   padding-top: 20px;
 }
 
-.discount-banner .discount-cta {
+.discount-banner-old .discount-cta {
   max-width: 340px;  
   margin: 56px auto;
 }
 
 @media screen and (max-width: 767px){
-  .discount-banner {
+  .discount-banner-old {
     padding: 10px;
   }
 
-  .discount-banner .discount-container {
+  .discount-banner-old .discount-container {
     width: 100%;
     padding: 20px 10px;
   }
