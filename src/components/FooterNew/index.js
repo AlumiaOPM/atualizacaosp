@@ -36,13 +36,7 @@ export default function Footer({ courseName }) {
             </div>
           </div>
         </div>
-
-        <div className="pos-footer">
-          <div className="item">
-            <p>© Copyright 2021</p>
-            <p>ESPM - O inusitado em constante movimento</p>
-          </div>
-        </div>
+        
       </Provider>
     </div>
   )

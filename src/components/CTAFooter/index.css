@@ -1,0 +1,12 @@
+.cta-footer-container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.cta-footer-container p {
+  color: #111;
+}

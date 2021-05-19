@@ -33,7 +33,9 @@ import ParaQuemSeDestina from '../../components/ParaQuemSeDestina';
 import QuandoAconteceNew from '../../components/QuandoAconteceNew';
 import InvestimentoNew from '../../components/InvestimentoNew';
 import DiscountBannerNew from '../../components/DiscountBannerNew';
+import CTAFooter from '../../components/CTAFooter';
 import FooterNew from '../../components/FooterNew';
+import PosFooter from '../../components/PosFooter';
 import LGPDDrawer from '../../components/LGPDDrawer';
 
 import {
@@ -50,7 +52,7 @@ import {
   Button
 } from '@chakra-ui/react';
 
-export default function Course(props) {
+export default function CourseNew(props) {
   const history = useHistory();
   const { slug } = useParams();
   const [data, setData] = React.useState([]);
@@ -213,9 +215,12 @@ export default function Course(props) {
           handleModalOpen={handleModalOpen}
         />
       }
+
+      <CTAFooter />
       <FooterNew
         courseName={data[0] && data[0][9]}
       />
+      <PosFooter />
 
       <LGPDDrawer />
     </div>

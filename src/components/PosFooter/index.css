@@ -1,0 +1,10 @@
+.pos-footer {
+  background: linear-gradient(to right, #742F8F, #B8147E);
+  text-align: center;
+  padding: 0px 0px 2px 0px;
+}
+
+.pos-footer small {
+  color: #fff;
+  text-transform: uppercase;
+}
