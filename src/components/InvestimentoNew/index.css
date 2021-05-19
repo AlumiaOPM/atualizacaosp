@@ -1,0 +1,45 @@
+.investimento-new {
+  border: 1px solid #111;
+  width: 70%;
+  margin: 20px auto;
+  padding: 40px 0px 0px 0px;
+}
+
+.investimento-new .investimento-title h3 {
+  text-align: center;
+  font-family: "Heebo", sans-serif;
+  font-size: 2em;
+  color: #111;
+}
+
+.investimento-new .investimento-flexSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.investimento-new .investimento-flexSection .investimento-flexItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 60px;
+}
+
+.investimento-new .investimento-flexSection .investimento-flexItem h3 {
+  color: #111;
+  font-family: "Heebo", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.investimento-new .investimento-flexSection .investimento-flexItem p {
+  color: #656565;
+  font-size: 18px;
+  margin-top: -20px;
+}
+
+.investimento-new .investimento-flexSection .investimento-flexItem p span {
+  color: #111;
+  font-weight: 600;
+}

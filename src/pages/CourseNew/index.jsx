@@ -31,9 +31,10 @@ import CourseInformationNew from '../../components/CourseInformationNew';
 import GenericSectionNew from '../../components/GenericSectionNew';
 import ParaQuemSeDestina from '../../components/ParaQuemSeDestina';
 import QuandoAconteceNew from '../../components/QuandoAconteceNew';
-import Investimento from '../../components/Investimento';
+import InvestimentoNew from '../../components/InvestimentoNew';
 import DiscountBannerNew from '../../components/DiscountBannerNew';
 import FooterNew from '../../components/FooterNew';
+import LGPDDrawer from '../../components/LGPDDrawer';
 
 import {
   ModalHeader,
@@ -200,7 +201,7 @@ export default function Course(props) {
       }
 
       {data &&
-        <Investimento
+        <InvestimentoNew
           valor={data[0] && data[0][14]}
           cartLink={cartLink}
         />
@@ -215,6 +216,8 @@ export default function Course(props) {
       <FooterNew
         courseName={data[0] && data[0][9]}
       />
+
+      <LGPDDrawer />
     </div>
   )
 }

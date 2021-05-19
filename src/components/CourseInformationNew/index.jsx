@@ -54,7 +54,7 @@ export default function CourseInformationNew({ hero, cartLink, inicioPt2, sectio
         </div>
       </Provider>
 
-      <Disc fill="#fff" />
+      <Disc fill="#fff" style={{marginTop: "-2%"}}/>
     </div>
   )
 }

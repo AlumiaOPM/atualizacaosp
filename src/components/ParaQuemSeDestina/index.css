@@ -1,6 +1,6 @@
 .para-quem-se-destina {
   position: relative;
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
 .para-quem-se-destina .para-quem-se-destina-container {
@@ -16,6 +16,7 @@
 
 .para-quem-se-destina .para-quem-se-destina-container .item:first-child {
   width: 30%;
+  margin-top: -38px;
 }
 
 .para-quem-se-destina .para-quem-se-destina-container .item:last-child {

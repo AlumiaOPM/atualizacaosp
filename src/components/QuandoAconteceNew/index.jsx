@@ -2,6 +2,8 @@ import React from 'react';
 
 import Provider from '../Provider';
 
+import calendar from '../../assets/calendar.svg';
+
 import './index.css';
 
 export default function QuandoAcontece({ iniciopt1, iniciopt2, sectionId }) {
@@ -11,7 +13,13 @@ export default function QuandoAcontece({ iniciopt1, iniciopt2, sectionId }) {
 
         <div className="quando-acontece-flexSection">
           <div className="quando-acontece-flexItem">
-            <i aria-hidden="true" className="icone icone-calendar"></i>
+            <img 
+              src={calendar} 
+              style={{
+                transform:'scale(0.7)',
+                margin: '10px'
+              }}
+            />
           </div>
           <div className="quando-acontece-flexItem">
             <h3>Quando acontece?</h3>
