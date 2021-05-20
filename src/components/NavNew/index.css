@@ -58,6 +58,10 @@
   text-decoration: underline;
 }
 
+.header-course .row:first-child .course-head .logo .container-header-cta {
+  display: none;
+}
+
 .header-course .row:last-child {
   display: flex;
   flex-direction: column;
@@ -165,6 +169,7 @@
 
   .header-course .row:first-child .course-head .logo .container-header-cta {
     position: relative;
+    display: block;
   }
 
   .header-course .row:last-child {
