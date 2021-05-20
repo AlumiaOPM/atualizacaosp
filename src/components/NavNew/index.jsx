@@ -50,20 +50,20 @@ export default function HeaderHome({
               <a href="#quando-acontece">Quando acontece</a>
               <a href="#investimento">Investimento</a>
               <Button
-                  onClick={handleModalOpen}
-                  colorScheme="black"
-                  variant="solid"
-                  background="transparent"
-                  border="1px solid #fff"
-                  borderRadius="3px"
-                  minWidth="180px"
-                  _hover={{
-                    background: "#111",
-                    borderColor: "#111"
-                  }}
-                >
-                  SAIBA MAIS
-                </Button>
+                onClick={handleModalOpen}
+                colorScheme="black"
+                variant="solid"
+                background="transparent"
+                border="1px solid #fff"
+                borderRadius="3px"
+                minWidth="180px"
+                _hover={{
+                  background: "#111",
+                  borderColor: "#111"
+                }}
+              >
+                SAIBA MAIS
+              </Button>
             </nav>
 
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Provider from '../Provider';
-import Disc from '../../assets/Disc';
+import Disc from '../../assets/Disc2';
 
 import { Button } from '@chakra-ui/react';
 
@@ -61,7 +61,7 @@ export default function CourseInformationNew({
         </div>
       </Provider>
 
-      <Disc fill="#fff" style={{marginTop: "-2%"}}/>
+      <Disc style={{marginTop: "-2%"}} fill="#fff"/>
     </div>
   )
 }

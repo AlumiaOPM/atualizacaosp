@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Disc from '../../assets/Disc';
+import Disc from '../../assets/Disc2';
 
 import Provider from '../Provider';
 
