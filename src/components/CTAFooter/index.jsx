@@ -7,7 +7,7 @@ import waves from '../../assets/waves.png';
 
 import './index.css';
 
-export default function CTAFooter() {
+export default function CTAFooter({ handleModalOpen }) {
   return (
     <div className="cta-footer">
       <Provider>
@@ -20,6 +20,7 @@ export default function CTAFooter() {
             height="54px"
             variant="solid"
             margin="20px auto 28px auto"
+            onClick={handleModalOpen}
           >
             QUERO FALAR COM UM CONSULTOR
           </Button>

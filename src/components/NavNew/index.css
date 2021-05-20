@@ -120,6 +120,7 @@
 @media screen and (max-width: 767px){
   .header-course {
     padding: 0px;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -152,10 +153,18 @@
     position: fixed;
     top: 0;
     transform: translateX(100%);
+    display: none;
   }
 
   .header-course .row:first-child .course-head .logo {
     padding: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header-course .row:first-child .course-head .logo .container-header-cta {
+    position: relative;
   }
 
   .header-course .row:last-child {
@@ -171,4 +180,5 @@
     justify-content: flex-start;
     width: 100%;
   }
+
 }

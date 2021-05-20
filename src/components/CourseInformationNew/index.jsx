@@ -8,7 +8,13 @@ import icon from '../../assets/information.svg';
 
 import './index.css';
 
-export default function CourseInformationNew({ hero, cartLink, inicioPt2, sectionId }) {
+export default function CourseInformationNew({ 
+  hero, 
+  cartLink, 
+  inicioPt2, 
+  sectionId, 
+  handleModalOpen 
+}) {
   return (
     <div className="courseInformationNew">
       <Provider>
@@ -43,11 +49,12 @@ export default function CourseInformationNew({ hero, cartLink, inicioPt2, sectio
               height="54px"
               variant="solid"
               margin="10px auto"
+              onClick={handleModalOpen}
               _hover={{
                 filter: "brightness(130%)"
               }}
             >
-              INSCREVER-SE
+              SAIBA MAIS
             </Button>
           </div>
 

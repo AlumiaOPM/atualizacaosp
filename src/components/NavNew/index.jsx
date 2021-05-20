@@ -4,12 +4,8 @@ import Provider from '../Provider';
 import {
   Button,
   Skeleton,
-  Link
 } from '@chakra-ui/react';
 
-import { IconContext } from 'react-icons';
-import { FaRegCalendarAlt, FaRegClock } from 'react-icons/fa';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
 import Disc from '../../assets/Disc';
 
 import logo from '../../assets/logo.jpg';
@@ -34,13 +30,27 @@ export default function HeaderHome({
           <div className="course-head">
             <div className="logo">
               <img src={logo} alt="logo" />
+              <div className="container-header-cta">
+                <Button
+                  onClick={handleModalOpen}
+                  colorScheme="black"
+                  variant="solid"
+                  background="transparent"
+                  border="1px solid #fff"
+                  borderRadius="3px"
+                >
+                  SAIBA MAIS
+                </Button>
+              </div>
             </div>
+
             <nav className="nav">
               <a href="#sobre-a-formacao">Sobre a formação</a>
               <a href="#programa">O Programa</a>
               <a href="#quando-acontece">Quando acontece</a>
               <a href="#investimento">Investimento</a>
             </nav>
+
           </div>
         </div>
 
@@ -54,7 +64,7 @@ export default function HeaderHome({
         </div>
       </Provider>
 
-      <Disc 
+      <Disc
         fill="#723090"
       />
     </div>

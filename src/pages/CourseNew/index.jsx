@@ -142,7 +142,7 @@ export default function CourseNew(props) {
                 <Button
                   w="100%"
                   margin="0px"
-                  colorScheme="green"
+                  colorScheme="black"
                   mr={3}
                   type="submit"
                   isLoading={submitLoading}
@@ -172,6 +172,7 @@ export default function CourseNew(props) {
           cartLink={cartLink}
           inicioPt2={data[0] && data[0][3]}
           sectionId="sobre-a-formacao"
+          handleModalOpen={handleModalOpen}
         />
       }
 
@@ -216,7 +217,10 @@ export default function CourseNew(props) {
         />
       }
 
-      <CTAFooter />
+      <CTAFooter 
+        handleModalOpen={handleModalOpen}
+      />
+
       <FooterNew
         courseName={data[0] && data[0][9]}
       />
