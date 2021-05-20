@@ -55,4 +55,10 @@
     padding: 10px;
     text-align: center;
   }
+
+  .para-quem-se-destina .para-quem-se-destina-container .item h3 {
+    line-height: 52px;
+    margin-bottom: 20px;
+  }
+
 }
