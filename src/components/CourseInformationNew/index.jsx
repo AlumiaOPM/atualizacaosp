@@ -22,13 +22,13 @@ export default function CourseInformationNew({ hero, cartLink, inicioPt2, sectio
               "Atualização",
               `Aulas: ${inicioPt2}`].map(text => (
                 <div className="listItem">
-                  <div><img src={icon} /></div>
+                  <div className="listIcon"><img src={icon} /></div>
                   <div><p>{text}</p></div>
                 </div>
               ))}
 
             <div className="listItem">
-              <div><img src={icon} /></div>
+              <div className="listIcon"><img src={icon} /></div>
               <div>
                 <p>Formas de pagamento</p>
                 <small>

@@ -54,6 +54,17 @@
   .generic-section {
     padding: 40px 10px;
     width: 100%;
+    flex-direction: column;
+  }
+
+  .generic-section h3 {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .generic-section .content {
+    width: 100%;
+    margin: 0px auto;
   }
 
   .generic-section .content ul {

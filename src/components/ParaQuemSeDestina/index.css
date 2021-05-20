@@ -43,3 +43,16 @@
   color: #111;
   margin-bottom: -24px;
 }
+
+@media screen and (max-width: 767px){
+  .para-quem-se-destina .para-quem-se-destina-container {
+    flex-direction: column;
+  }
+
+  .para-quem-se-destina .para-quem-se-destina-container .item:last-child,
+  .para-quem-se-destina .para-quem-se-destina-container .item:first-child {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+}

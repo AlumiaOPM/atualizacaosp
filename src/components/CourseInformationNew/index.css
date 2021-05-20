@@ -35,3 +35,28 @@
 .courseInformation-flexSection .item .listItem div:last-child {
   padding-left: 10px;
 }
+
+@media screen and (max-width: 767px){
+  .courseInformation-flexSection {
+    flex-direction: column;
+  }
+
+  .courseInformation-flexSection .item {
+    width: 100%;
+  }
+
+  .courseInformation-flexSection .item:last-child {
+    padding: 40px 10px;
+  }
+
+  .courseInformation-flexSection .item .listItem {
+    width: 100%;
+    margin: 14px auto;
+  }
+
+  .courseInformation-flexSection .item .listItem .listIcon {
+    min-width: 46px;
+  }
+
+
+}
