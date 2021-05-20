@@ -6,8 +6,9 @@ export default function Disc(props) {
       position: 'relative',
       zIndex: 10,
       transform: "scale(-1, 1)",
-      width: "110%",
-      left: "-10%",
+      width: "100%",
+      left: "-0%",
+
       ...props.style
     }}>
       <svg xmlns="http://www.w3.org/2000/svg" fill={props.fill} viewBox="0 0 1000 100" preserveAspectRatio="none">
