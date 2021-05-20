@@ -44,3 +44,17 @@
   color: #111;
   font-weight: 600;
 }
+
+@media screen and (max-width: 767px){
+  .investimento {
+    padding: 10px;
+  }
+
+  .investimento-new {
+    width: 100%;
+  }
+
+  .investimento-new .investimento-flexSection {
+    flex-direction: column;
+  }
+}

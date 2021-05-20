@@ -1,10 +1,16 @@
-.pos-footer {
+.pos-footer-new {
   background: linear-gradient(to right, #742F8F, #B8147E);
   text-align: center;
   padding: 0px 0px 2px 0px;
 }
 
-.pos-footer small {
+.pos-footer-new small {
   color: #fff;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px){
+  .pos-footer-new small {
+    font-size: 10px;
+  }
 }

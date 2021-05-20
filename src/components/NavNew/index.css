@@ -5,6 +5,10 @@
   position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  -ms-background-attachment: fixed;
+  -moz-background-attachment: fixed;
+  -o-background-attachment: fixed;
+  -webkit-background-attachment: fixed;
   background-position-x: left;
 }
 
@@ -117,6 +121,10 @@
   .header-course {
     padding: 0px;
     background-repeat: no-repeat;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -webkit-background-size: cover;
     background-size: cover;
   }
 

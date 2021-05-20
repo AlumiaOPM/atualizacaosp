@@ -10,3 +10,10 @@
 .cta-footer-container p {
   color: #111;
 }
+
+@media screen and (max-width: 767px){
+  .cta-footer-container {
+    padding: 10px;
+    text-align: center;
+  }
+}

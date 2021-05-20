@@ -35,6 +35,10 @@
 }
 
 @media screen and (max-width: 767px){
+  .quando-acontece {
+    margin-top: -42px;
+  }
+
   .quando-acontece-flexSection {
     flex-direction: column;
     text-align: center;
