@@ -6,7 +6,7 @@ import {
   Skeleton,
 } from '@chakra-ui/react';
 
-import Disc from '../../assets/Disc';
+import Disc from '../../assets/Disc2';
 
 import logo from '../../assets/logo.jpg';
 

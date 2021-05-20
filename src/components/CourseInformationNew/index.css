@@ -36,6 +36,11 @@
   padding-left: 10px;
 }
 
+.courseInformation-flexSection .item .listItem .listIcon {
+  width: 46px;
+  text-align: center;
+}
+
 @media screen and (max-width: 767px){
   .courseInformation-flexSection {
     flex-direction: column;
