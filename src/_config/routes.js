@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Home from '../pages/Home';
-import Course from '../pages/Course';
 import CourseNew from '../pages/CourseNew';
 import NotFound from '../pages/NotFound';
 
@@ -20,10 +19,6 @@ export default function Routes() {
 				<Route exact path="/404" component={NotFound} />
 
 				<Route exact path="/:slug">
-					<Course />
-				</Route>
-
-				<Route exact path="/new/:slug">
 					<CourseNew />
 				</Route>
 
@@ -32,7 +27,7 @@ export default function Routes() {
 				</Route>
 
 				<Route exact path="/cursos/extensao/cursos-de-atualizacao/:slug">
-					<Course />
+					<CourseNew />
 				</Route>
 
 			</Switch>

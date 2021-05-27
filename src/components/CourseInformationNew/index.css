@@ -50,8 +50,13 @@
     width: 100%;
   }
 
+  .courseInformation-flexSection .item:first-child {
+    display: none;
+  }
+
   .courseInformation-flexSection .item:last-child {
     padding: 40px 10px;
+    margin-top: -40px;
   }
 
   .courseInformation-flexSection .item .listItem {
@@ -62,6 +67,5 @@
   .courseInformation-flexSection .item .listItem .listIcon {
     min-width: 46px;
   }
-
 
 }

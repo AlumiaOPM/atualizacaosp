@@ -61,9 +61,9 @@ export default function CourseNew(props) {
   const [isOpen, setisOpen] = React.useState(false);
   const [fields, setFields] = React.useState({
     error: false,
-    name: '',
+    nome_completo: '',
     email: '',
-    phone: '',
+    mobilephone: '',
   });
 
   React.useEffect(() => {
@@ -87,8 +87,61 @@ export default function CourseNew(props) {
     setisOpen(false);
   };
 
-  const handleSubmit = event => {
-    console.log(event);
+  const handleSubmit = async event => {
+    setSubmitLoading(true);
+    event.preventDefault();
+
+    const payload = {
+      "submittedAt": Date.now(),
+      "fields": [
+        {
+          "name": "firstname",
+          "value": fields.nome_completo,
+        },
+        {
+          "name": "email",
+          "value": fields.email,
+        },
+        {
+          "name": "mobilephone",
+          "value": fields.mobilephone,
+        },
+        {
+          "name": "website",
+          "value": window.location.href
+        }
+      ]
+    }
+
+    try {
+      const url = data[0] && `https://api.hsforms.com/submissions/v3/integration/submit/6331207/${data[0][20]}` || false;
+      console.log(payload);
+
+
+      if (!url)
+        throw new Error("handleSubmit() -> Fetch error: no URL param");
+
+      const response = await fetch(url, {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload),
+      })
+
+      if (response.ok) {
+        console.log(event);
+        setSubmitLoading(false);
+        return history.push(`/obrigado/${data[0][12]}`);
+      } else {
+        console.log(response);
+        return setSubmitLoading(false);
+      }
+    } catch (error) {
+      console.log(error)
+      return setSubmitLoading(false);
+    }
+
   };
 
   const handleModalOpen = event => {
@@ -118,7 +171,7 @@ export default function CourseNew(props) {
                   <Input
                     placeholder="Nome completo"
                     type="text"
-                    onChange={e => setFields({ ...fields, name: e.target.value })}
+                    onChange={e => setFields({ ...fields, nome_completo: e.target.value })}
                   />
                 </FormControl>
                 <FormControl isRequired>
@@ -132,7 +185,7 @@ export default function CourseNew(props) {
                   <Input
                     placeholder="DDD e telefone"
                     type="tel"
-                    onChange={e => setFields({ ...fields, phone: e.target.value })}
+                    onChange={e => setFields({ ...fields, mobilephone: e.target.value })}
                   />
                 </FormControl>
               </Stack>
@@ -184,7 +237,7 @@ export default function CourseNew(props) {
       }
 
       {data &&
-        <ParaQuemSeDestina 
+        <ParaQuemSeDestina
           content={data[0] && data[0][17]}
         />
       }
@@ -217,7 +270,7 @@ export default function CourseNew(props) {
         />
       }
 
-      <CTAFooter 
+      <CTAFooter
         handleModalOpen={handleModalOpen}
       />
 
