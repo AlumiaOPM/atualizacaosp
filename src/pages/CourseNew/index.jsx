@@ -191,14 +191,15 @@ export default function CourseNew(props) {
               </Stack>
             </ModalBody>
             <ModalFooter>
-              <div className="modal-cta">
+              <div className="modal-cta" style={{width: '100%'}}>
                 <Button
                   w="100%"
-                  margin="0px"
+                  margin="0px 0px 20px 0px"
                   colorScheme="black"
                   mr={3}
                   type="submit"
                   isLoading={submitLoading}
+                  isFullWidth
                 >
                   ENVIAR
                 </Button>
