@@ -43,7 +43,7 @@
 }
 
 .header-course .row:first-child .course-head .nav a {
-  margin: 0px 40px;
+  margin: 0px 36px;
   color: #fff;
   width: 130px;
   text-align: center;
@@ -56,6 +56,14 @@
 
 .header-course .row:first-child .course-head .nav a:hover {
   text-decoration: underline;
+}
+
+.header-course .row:first-child .course-head a:last-child {
+  margin: 0px 1.56rem;
+}
+
+.header-course .row:first-child .course-head a:last-child:hover {
+  text-decoration: none;
 }
 
 .header-course .row:first-child .course-head .logo .container-header-cta {
@@ -184,6 +192,10 @@
     margin: 6px auto;
     justify-content: flex-start;
     width: 100%;
+  }
+
+  .header-course .row:first-child .course-head a:last-child {
+    margin: 0px;
   }
 
 }

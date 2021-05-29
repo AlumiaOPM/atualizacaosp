@@ -1,0 +1,72 @@
+@keyframes toLeft {
+  from {
+    background-position-x: 0%;
+  }
+
+  to {
+    background-position-x: 100%;
+  }
+}
+
+#thankyou-page{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url('../../assets/nav-new.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 0%;
+  min-height: 100vh;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-repeat: no-repeat;
+  animation: toLeft 200s ease infinite;
+}
+
+#thankyou-page:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: radial-gradient( rgba(0,0,0,0.6) 60%, transparent);
+  z-index: 9;
+}
+
+#thankyou-page .thankyou-page-container {
+  max-width: 780px;
+  background-color: var(--primary-color);
+  padding: 20px;
+  
+  text-align: center;
+}
+
+#thankyou-page h2{
+  color: #f1f1f1;
+  font-size: 3rem;
+  position: relative;
+  z-index: 10;
+  font-family: "Exo", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#thankyou-page p{
+  margin: 20px auto;
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  position: relative;
+  z-index: 10;
+}
+
+#thankyou-page .button {
+  min-width: 300px;
+  margin: 60px auto;
+}

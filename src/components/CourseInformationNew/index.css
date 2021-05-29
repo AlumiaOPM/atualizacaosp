@@ -41,6 +41,11 @@
   text-align: center;
 }
 
+.courseInformation-cta {
+  width: 100%;
+}
+
+
 @media screen and (max-width: 767px){
   .courseInformation-flexSection {
     flex-direction: column;

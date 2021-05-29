@@ -28,15 +28,15 @@ export default function Footer({ courseName }) {
             <div className="item">
               <ul>
                 <li><p>{courseName}</p></li>
-                <li><a href="#">Sobre a formação</a></li>
-                <li><a href="#">O Programa</a></li>
-                <li><a href="#">Quando acontece</a></li>
-                <li><a href="#">Investimento</a></li>
+                <li><a href="#sobre-a-formacao">Sobre a formação</a></li>
+                <li><a href="#programa">O Programa</a></li>
+                <li><a href="#quando-acontece">Quando acontece</a></li>
+                <li><a href="#investimento">Investimento</a></li>
               </ul>
             </div>
           </div>
         </div>
-        
+
       </Provider>
     </div>
   )

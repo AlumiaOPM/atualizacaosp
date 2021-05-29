@@ -148,6 +148,8 @@ export default function CourseNew(props) {
     setisOpen(true);
   };
 
+  const isAlumeca = data[0] && data[0][15] === "TRUE";
+
   return (
     <div className="curso">
       <Modal
@@ -216,7 +218,7 @@ export default function CourseNew(props) {
         cargaHoraria={data[0] && data[0][13]}
         inicio={data[0] && data[0][1]}
         handleModalOpen={handleModalOpen}
-        isAlumeca={data[0] && data[0][15] === "TRUE"}
+        isAlumeca={isAlumeca}
         cartLink={cartLink}
       />
 
@@ -227,6 +229,8 @@ export default function CourseNew(props) {
           inicioPt2={data[0] && data[0][3]}
           sectionId="sobre-a-formacao"
           handleModalOpen={handleModalOpen}
+          isAlumeca={isAlumeca}
+          loading={loading}
         />
       }
 
@@ -247,6 +251,7 @@ export default function CourseNew(props) {
         <GenericSectionNew
           title="O que você vai aprender?"
           content={data[0] && data[0][18]}
+          sectionId="programa"
         />
       }
 
@@ -254,6 +259,7 @@ export default function CourseNew(props) {
         <QuandoAconteceNew
           iniciopt1={data[0] && data[0][2]}
           iniciopt2={data[0] && data[0][3]}
+          sectionId="quando-acontece"
         />
       }
 
@@ -261,6 +267,7 @@ export default function CourseNew(props) {
         <InvestimentoNew
           valor={data[0] && data[0][14]}
           cartLink={cartLink}
+          sectionId="investimento"
         />
       }
 

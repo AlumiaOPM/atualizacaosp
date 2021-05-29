@@ -1,10 +1,12 @@
 import React from 'react';
 import Provider from '../Provider';
+import { Link } from '@chakra-ui/react';
 
 import {
   Button,
   Skeleton,
 } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 import Disc from '../../assets/Disc2';
 
@@ -15,12 +17,53 @@ import './index.css';
 export default function HeaderHome({
   loading,
   courseTitle,
-  inicio,
-  cargaHoraria,
   handleModalOpen,
   isAlumeca,
   cartLink
 }) {
+
+  const CTADynamic = () => (
+    <>
+      {loading && 
+        <Skeleton height="40px" minWidth="180px" isLoaded={!loading} />
+      }
+      {!loading && isAlumeca &&
+        <Link isExternal href={cartLink}>
+          <Button
+            colorScheme="black"
+            variant="solid"
+            background="transparent"
+            border="1px solid #fff"
+            borderRadius="3px"
+            minWidth="180px"
+            fontFamily="Open Sans"
+            _hover={{
+              background: "#111",
+              borderColor: "#111",
+            }}
+          >
+            INSCREVER-SE
+          <ExternalLinkIcon marginLeft="2" />
+          </Button>
+        </Link>}
+      {!loading && !isAlumeca &&
+        <Button
+          onClick={handleModalOpen}
+          colorScheme="black"
+          variant="solid"
+          background="transparent"
+          border="1px solid #fff"
+          borderRadius="3px"
+          minWidth="180px"
+          _hover={{
+            background: "#111",
+            borderColor: "#111",
+          }}
+        >
+          SAIBA MAIS
+      </Button>}
+    </>
+  )
 
   return (
     <div className="header-course">
@@ -31,16 +74,7 @@ export default function HeaderHome({
             <div className="logo">
               <img src={logo} alt="logo" />
               <div className="container-header-cta">
-                <Button
-                  onClick={handleModalOpen}
-                  colorScheme="black"
-                  variant="solid"
-                  background="transparent"
-                  border="1px solid #fff"
-                  borderRadius="3px"
-                >
-                  SAIBA MAIS
-                </Button>
+                <CTADynamic />
               </div>
             </div>
 
@@ -49,21 +83,7 @@ export default function HeaderHome({
               <a href="#programa">O Programa</a>
               <a href="#quando-acontece">Quando acontece</a>
               <a href="#investimento">Investimento</a>
-              <Button
-                onClick={handleModalOpen}
-                colorScheme="black"
-                variant="solid"
-                background="transparent"
-                border="1px solid #fff"
-                borderRadius="3px"
-                minWidth="180px"
-                _hover={{
-                  background: "#111",
-                  borderColor: "#111"
-                }}
-              >
-                SAIBA MAIS
-              </Button>
+              <CTADynamic />
             </nav>
 
           </div>

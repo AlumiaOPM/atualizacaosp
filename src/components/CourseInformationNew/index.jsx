@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from '@chakra-ui/react';
 import Provider from '../Provider';
 import Disc from '../../assets/Disc2';
 
 import { Button } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 import informationIcon from '../../assets/information.svg';
 import aulasIcon from '../../assets/aulas_icon.svg';
@@ -16,10 +18,12 @@ export default function CourseInformationNew({
   cartLink,
   inicioPt2,
   sectionId,
-  handleModalOpen
+  handleModalOpen,
+  isAlumeca,
+  loading
 }) {
   return (
-    <div className="courseInformationNew">
+    <div className="courseInformationNew" id={sectionId && sectionId}>
       <Provider>
         <div className="courseInformation-flexSection">
 
@@ -55,19 +59,41 @@ export default function CourseInformationNew({
               </div>
             </div>
 
-            <Button
-              colorScheme="black"
-              width="100%"
-              height="54px"
-              variant="solid"
-              margin="10px auto"
-              onClick={handleModalOpen}
-              _hover={{
-                filter: "brightness(130%)"
-              }}
-            >
-              SAIBA MAIS
-            </Button>
+            <div className="courseInformation-cta">
+              {/* Se for alumeca mostra INSCREVER-SE */}
+              {!loading && isAlumeca &&
+                <Link isExternal href={cartLink}>
+                  <Button
+                    colorScheme="black"
+                    width="100%"
+                    height="46px"
+                    variant="solid"
+                    margin="20px auto"
+                    _hover={{
+                      filter: "brightness(130%)"
+                    }}
+                  >
+                    INSCREVER-SE
+                    <ExternalLinkIcon marginLeft="2" />
+                  </Button>
+                </Link>}
+
+              {/* Se não for alumeca mostra o SAIBA MAIS */}
+              {!loading && !isAlumeca &&
+                <Button
+                  colorScheme="black"
+                  width="100%"
+                  height="46px"
+                  variant="solid"
+                  margin="20px auto"
+                  onClick={handleModalOpen}
+                  _hover={{
+                    filter: "brightness(130%)"
+                  }}
+                >
+                  SAIBA MAIS
+              </Button>}
+            </div>
           </div>
 
         </div>

@@ -6,6 +6,7 @@ import CourseNew from '../pages/CourseNew';
 import NotFound from '../pages/NotFound';
 
 import ThankyouPage from '../pages/ThankyouPage';
+import ThankyouPageNew from '../pages/ThankyouPageNew';
 
 export default function Routes() {
 	return (
@@ -23,7 +24,7 @@ export default function Routes() {
 				</Route>
 
 				<Route exact path="/obrigado/:slug">
-					<ThankyouPage />
+					<ThankyouPageNew />
 				</Route>
 
 				<Route exact path="/cursos/extensao/cursos-de-atualizacao/:slug">
