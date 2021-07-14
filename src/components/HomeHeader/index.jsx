@@ -1,5 +1,7 @@
 import React from 'react';
 import Provider from '../Provider';
+import Disc from '../../assets/Disc2';
+
 import logo from '../../assets/logo.jpg';
 
 import './index.css';
@@ -14,6 +16,7 @@ export default function HeaderHome() {
             <div className="logo">
               <img src={logo} alt="logo" />
             </div>
+
             <nav className="nav">
               <a href="#comunicacao-e-marketing">Comunicação e Marketing</a>
               <a href="#gestao-de-pessoas">Gestão de Pessoas</a>
@@ -28,11 +31,11 @@ export default function HeaderHome() {
         <div className="row">
           <div className="title">
             <h1>Prepare-se para os novos <br></br> desafios do mercado</h1>
-            <p>Cursos de Atualização</p>
           </div>
         </div>
       </Provider>
-        
+
+      <Disc fill="#fff" />
     </div>
   )
 }

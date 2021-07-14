@@ -1,24 +1,21 @@
 import React from 'react';
 import Provider from '../Provider';
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
+  Box,
   InputGroup,
   InputRightElement,
   Input
 } from "@chakra-ui/react";
 import { FaSearch } from 'react-icons/fa';
-import { VscChevronRight } from 'react-icons/vsc';
 
 import './index.css';
 
 export default function SearchHome() {
 
-  const handleInputChange = ({target}) => {
+  const handleInputChange = ({ target }) => {
     const cards = document.querySelectorAll('.card');
 
-    //SE A BUSCA NÃO ESTIVER VAZIA
+    //If is not empty
     if (target.value.length > 0) {
       for (var i = 0; i < cards.length; i++) {
         const title = cards[i].querySelector('.text h4')
@@ -30,7 +27,7 @@ export default function SearchHome() {
           cards[i].classList.remove('hidden')
         }
       }
-      //CASO A BUSCA ESTIVER VAZIA
+      //If is empty
     } else {
       for (var i = 0; i < cards.length; i++) {
         cards[i].classList.remove('hidden');
@@ -40,38 +37,27 @@ export default function SearchHome() {
 
   return (
     <div className="searchHome">
-      <div className="breadcrumb">
-        <Provider>
-
-          <Breadcrumb separator={<VscChevronRight color="gray" />}>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="#">ESPM</BreadcrumbLink>
-            </BreadcrumbItem>
-
-            <BreadcrumbItem isCurrentPage>
-              <BreadcrumbLink href="#">Atualizações</BreadcrumbLink>
-            </BreadcrumbItem>
-          </Breadcrumb>
-
-        </Provider>
-      </div>
 
       <div className="search">
         <Provider>
 
-          <InputGroup>
-            <InputRightElement
-              pointerEvents="none"
-              children={<FaSearch color="gray" />}
-            />
-            <Input
-              type="text"
-              placeholder="O que você quer aprender?"
-              variant="filled"
-              focusBorderColor="gray.200"
-              onChange={handleInputChange}
-            />
-          </InputGroup>
+          <Box borderWidth="1px" borderRadius="lg" display="flex" p="6">
+            <p>Buscar por cursos</p>
+
+            <InputGroup>
+              <InputRightElement
+                pointerEvents="none"
+                children={<FaSearch color="gray" />}
+              />
+              <Input
+                type="text"
+                placeholder="O que você quer aprender?"
+                variant="outline"
+                focusBorderColor="gray.900"
+                onChange={handleInputChange}
+              />
+            </InputGroup>
+          </Box>
 
         </Provider>
       </div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from "@chakra-ui/react";
 
+import cardImage from '../../assets/card-bg.jpg';
+
 import './index.css';
 
 function Card({ image, course, startDate, landingPageLink, expired, openPopup, courseCode }) {
@@ -9,7 +11,7 @@ function Card({ image, course, startDate, landingPageLink, expired, openPopup, c
 		<a href={!expired && landingPageLink} target="_blank">
 			<div className="card">
 				<div className="thumbnail">
-					<img src={image} alt="course" />
+					<img src={cardImage} alt="course" />
 				</div>
 				<div className="text">
 					<h4>{course}</h4>
@@ -17,17 +19,25 @@ function Card({ image, course, startDate, landingPageLink, expired, openPopup, c
 				</div>
 				<div className="action">
 					{!expired && <Button
-						colorScheme="green"
+						colorScheme="black"
 						size="lg"
 						variant="outline"
 						width="100%"
+						_hover={{
+							background: "black",
+							color: "white"
+						}}
 					>Inscrições abertas</Button>}
 
 					{expired && <Button
-						colorScheme="green"
+						colorScheme="black"
 						size="lg"
 						variant="outline"
 						width="100%"
+						_hover={{
+							background: "black",
+							color: "white"
+						}}
 						onClick={() => openPopup(course, startDate, courseCode)}
 					>Avise-me</Button>}
 				</div>

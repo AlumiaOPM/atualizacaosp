@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Home from '../pages/Home';
-import CourseNew from '../pages/CourseNew';
+import Course from '../pages/Course';
 import NotFound from '../pages/NotFound';
 
-import ThankyouPage from '../pages/ThankyouPage';
+import PoliticaDePrivacidade from '../pages/PoliticaDePrivacidade';
 import ThankyouPageNew from '../pages/ThankyouPageNew';
 
 export default function Routes() {
@@ -17,18 +17,16 @@ export default function Routes() {
 				<Route exact path="/">
 					<Home />
 				</Route>
+				
 				<Route exact path="/404" component={NotFound} />
+				<Route exact path="/politica-de-privacidade" component={PoliticaDePrivacidade} />
 
 				<Route exact path="/:slug">
-					<CourseNew />
+					<Course />
 				</Route>
 
 				<Route exact path="/obrigado/:slug">
 					<ThankyouPageNew />
-				</Route>
-
-				<Route exact path="/cursos/extensao/cursos-de-atualizacao/:slug">
-					<CourseNew />
 				</Route>
 
 			</Switch>

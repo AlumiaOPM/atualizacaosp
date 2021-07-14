@@ -25,6 +25,7 @@ export default function Footer({ courseName }) {
               </ul>
             </div>
 
+            {courseName && 
             <div className="item">
               <ul>
                 <li><p>{courseName}</p></li>
@@ -33,7 +34,7 @@ export default function Footer({ courseName }) {
                 <li><a href="#quando-acontece">Quando acontece</a></li>
                 <li><a href="#investimento">Investimento</a></li>
               </ul>
-            </div>
+            </div>}
           </div>
         </div>
 

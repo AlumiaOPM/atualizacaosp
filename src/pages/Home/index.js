@@ -19,10 +19,14 @@ import {
 import HomeHeader from '../../components/HomeHeader';
 import HomeSearch from '../../components/HomeSearch';
 import HomeCollection from '../../components/HomeCollection';
-import HomeFooter from '../../components/HomeFooter';
 import LGPDDrawer from '../../components/LGPDDrawer';
+import DiscountBannerNew from '../../components/DiscountBannerNew';
+import FooterNew from '../../components/FooterNew';
+import PosFooter from '../../components/PosFooter';
 
 import { getCourseDataAndThumbnails } from '../../services/api';
+
+import waves from '../../assets/waves.png';
 
 export default function Home() {
   const [courses, setCourses] = React.useState([]);
@@ -68,13 +72,12 @@ export default function Home() {
   }
 
   const openPopup = (coursename, startDate, courseCode) => {
-    //TODO dinamic URL
     setFields({
       ...fields,
       coursename: coursename,
       inicio: startDate,
       curso: courseCode,
-      url: "https://atualizacaosp.espm.br/",
+      url: window && window.location.href,
     })
 
     return setIsOpen(true);
@@ -185,7 +188,7 @@ export default function Home() {
       <HomeHeader />
       <HomeSearch />
       <HomeCollection
-        title="Mais vendidos"
+        title="Mais procurados"
         data={courseFilter('mostSelled')}
         openPopup={openPopup}
         isLoading={loading.coursesRequest}
@@ -232,6 +235,15 @@ export default function Home() {
         openPopup={openPopup}
         isLoading={loading.coursesRequest}
       />
+
+      <DiscountBannerNew />
+      <img 
+        src={waves} 
+        style={{
+          margin: "0 auto"
+        }}
+      />
+
       <LGPDDrawer />
 
       <Slide
@@ -245,7 +257,8 @@ export default function Home() {
           Enviado com sucesso! Em nossa próxima turma, avisaremos você!
         </Alert>
       </Slide>
-      <HomeFooter />
+      <FooterNew />
+      <PosFooter />
     </div>
 
   )

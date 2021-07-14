@@ -1,10 +1,15 @@
-.breadcrumb {
-  background: #EDF2F7;
-  padding: 10px;
+.search {
+  padding: 20px 40px;
 }
 
-.search {
-  padding: 26px 266px;
+.search p {
+  width: 220px;
+  display: flex;
+  align-items: center;
+  font-family: "Heebo", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #421756;
 }
 
 @media screen and (max-width: 767px){
