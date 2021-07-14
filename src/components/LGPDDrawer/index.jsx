@@ -47,13 +47,13 @@ export default function LGPDDrawer() {
 
           <div className="lgpd-flexItem">
             <p>
-              Usamos cookies para armazenar informações sobre como você usa o nosso site e as páginas que visita. Tudo para tornar sua experiência a mais agradável possível. Para entender os tipos de cookies que utilizamos, acesse nossa <Link href="/politica-de-cookies" isExternal color="green">política de cookies<ExternalLinkIcon mx="2px" /></Link>. Ao clicar em Eu concordo, você consente com a utilização de cookies.
+              Usamos cookies para armazenar informações sobre como você usa o nosso site e as páginas que visita. Tudo para tornar sua experiência a mais agradável possível. Para entender os tipos de cookies que utilizamos, acesse nossa <Link href="/politica-de-cookies" isExternal color="black">política de cookies<ExternalLinkIcon mx="2px" /></Link>. Ao clicar em Eu concordo, você consente com a utilização de cookies.
             </p>
           </div>
 
           <div className="lgpd-flexItem">
             <Button 
-              colorScheme="green"
+              colorScheme="black"
               onClick={handleClick}
             >
               Eu concordo
