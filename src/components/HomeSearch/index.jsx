@@ -41,7 +41,7 @@ export default function SearchHome() {
       <div className="search">
         <Provider>
 
-          <Box borderWidth="1px" borderRadius="lg" display="flex" p="6">
+          <Box borderWidth="1px" borderRadius="lg" display="flex" p="6" className="home-search-wrapper">
             <p>Buscar por cursos</p>
 
             <InputGroup>

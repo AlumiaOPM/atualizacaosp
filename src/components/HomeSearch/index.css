@@ -16,4 +16,16 @@
   .search {
     padding: 20px;
   }
+
+  .search p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 14px;
+    justify-content: center;
+  }
+
+  .home-search-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
