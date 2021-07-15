@@ -26,7 +26,7 @@ import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { getCourseDataAndThumbnails } from '../../services/api';
 
-import NavNew from '../../components/NavNew';
+import CourseHead from '../../components/CourseHead';
 import CourseInformationNew from '../../components/CourseInformationNew';
 import GenericSectionNew from '../../components/GenericSectionNew';
 import ParaQuemSeDestina from '../../components/ParaQuemSeDestina';
@@ -212,7 +212,7 @@ export default function CourseNew(props) {
         </ModalContent>
       </Modal>
 
-      <NavNew
+      <CourseHead
         loading={loading}
         courseTitle={data[0] && data[0][9]}
         cargaHoraria={data[0] && data[0][13]}

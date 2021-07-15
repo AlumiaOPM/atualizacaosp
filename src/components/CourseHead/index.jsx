@@ -14,7 +14,7 @@ import logo from '../../assets/logo.jpg';
 
 import './index.css';
 
-export default function HeaderHome({
+export default function CourseHead({
   loading,
   courseTitle,
   handleModalOpen,
@@ -90,7 +90,7 @@ export default function HeaderHome({
         </div>
 
         <div className="row">
-          <h2 className="subtitle">Cursos de atualização</h2>
+          <h2 className="subtitle">DYNAMIC - UPDATE</h2>
           <div className="title">
             <h1>{courseTitle}</h1>
             {loading && <Skeleton height="80px" width="100%" margin="80px 0px 20px 0px" isLoaded={!loading} />}
