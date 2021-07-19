@@ -4,7 +4,7 @@ class Alubot {
   }
 
   static async sendDiscordNotification(fields) {
-    const url = "http://34.221.115.101:5000/api/alubot";
+    const url = "https://discord.alumia.online/api/alubot";
     const payload = {
       name: fields.nome_completo,
       phone: fields.mobilephone,
