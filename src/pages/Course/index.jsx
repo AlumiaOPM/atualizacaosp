@@ -52,6 +52,8 @@ import {
   Button
 } from '@chakra-ui/react';
 
+import Alubot from '../../services/alubot';
+
 export default function CourseNew(props) {
   const history = useHistory();
   const { slug } = useParams();
@@ -115,7 +117,6 @@ export default function CourseNew(props) {
 
     try {
       const url = data[0] && `https://api.hsforms.com/submissions/v3/integration/submit/6331207/${data[0][20]}` || false;
-      console.log(payload);
 
 
       if (!url)
@@ -132,6 +133,8 @@ export default function CourseNew(props) {
       if (response.ok) {
         console.log(event);
         setSubmitLoading(false);
+        await Alubot.sendDiscordNotification(fields);
+
         return history.push(`/obrigado/${data[0][12]}`);
       } else {
         console.log(response);
