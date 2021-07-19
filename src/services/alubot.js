@@ -29,4 +29,4 @@ class Alubot {
 
 }
 
-module.exports = Alubot;
+export default Alubot;
