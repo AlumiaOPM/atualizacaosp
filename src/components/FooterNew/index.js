@@ -1,3 +1,4 @@
+import React from 'react';
 import Provider from '../Provider';
 
 import logo from '../../assets/logo-new.png';

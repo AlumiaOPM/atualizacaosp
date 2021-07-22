@@ -23,7 +23,7 @@ export default function CourseHead({
 }) {
 
   const CTADynamic = () => (
-    <>
+    <div>
       {loading && 
         <Skeleton height="40px" minWidth="180px" isLoaded={!loading} />
       }
@@ -62,7 +62,7 @@ export default function CourseHead({
         >
           SAIBA MAIS
       </Button>}
-    </>
+    </div>
   )
 
   return (

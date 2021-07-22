@@ -96,7 +96,6 @@
 
 .header-course .title {
   text-align: center;
-  width: 100%;
 }
 
 .header-course .title h1 {
@@ -109,6 +108,8 @@
   z-index: 1;
   font-family: "Exo", sans-serif;
   text-transform: uppercase;
+  word-wrap: normal;
+  width: auto;
 }
 
 .header-course .title h1:before {

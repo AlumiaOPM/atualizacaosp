@@ -130,13 +130,13 @@ export default function Home() {
         return setIsOpen(false);
       } else {
         console.log(response)
-        setLoading({ ...loading, formSubmit: false });
+        setIsLoading({ ...loading, formSubmit: false });
         setStatus({ success: false, failed: true })
         return setIsOpen(false);
       }
     } catch (error) {
       console.log(error)
-      setLoading({ ...loading, formSubmit: false });
+      setIsLoading({ ...loading, formSubmit: false });
       setStatus({ success: false, failed: true })
       return setIsOpen(false);
     }
