@@ -19,7 +19,7 @@ export default function Routes() {
 				</Route>
 				
 				<Route exact path="/404" component={NotFound} />
-				<Route exact path="/politica-de-privacidade" component={PoliticaDePrivacidade} />
+				<Route exact path="/politica-de-cookies" component={PoliticaDePrivacidade} />
 
 				<Route exact path="/:slug">
 					<Course />

@@ -37,6 +37,7 @@ import CTAFooter from '../../components/CTAFooter';
 import FooterNew from '../../components/FooterNew';
 import PosFooter from '../../components/PosFooter';
 import LGPDDrawer from '../../components/LGPDDrawer';
+import WhatsappBtn from '../../components/WhatsappBtn';
 
 import {
   ModalHeader,
@@ -49,8 +50,13 @@ import {
   Input,
   FormControl,
   Stack,
-  Button
+  Button,
+  Link,
+  Checkbox,
+  Box,
+  useToast
 } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 import Alubot from '../../services/alubot';
 
@@ -59,8 +65,10 @@ export default function CourseNew(props) {
   const { slug } = useParams();
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
+  const [isCheckboxChecked, setIsCheckboxChecked] = React.useState(false);
   const [submitLoading, setSubmitLoading] = React.useState(false);
   const [isOpen, setisOpen] = React.useState(false);
+  const toast = useToast();
   const [fields, setFields] = React.useState({
     error: false,
     nome_completo: '',
@@ -85,13 +93,21 @@ export default function CourseNew(props) {
 
   const cartLink = data[0] && data[0][4];
 
-  const onClose = event => {
-    setisOpen(false);
-  };
+  const onClose = () => setisOpen(false);
 
   const handleSubmit = async event => {
-    setSubmitLoading(true);
     event.preventDefault();
+    if(!isCheckboxChecked)
+      return toast({
+        isClosable: true,
+        variant: "solid",
+        position: "bottom",
+        title: "Erro",
+        status: "info",
+        description: "Você deve concordar com nossa política de cookies para continuar."
+      })
+
+    setSubmitLoading(true);
 
     const payload = {
       "submittedAt": Date.now(),
@@ -133,7 +149,6 @@ export default function CourseNew(props) {
       if (response.ok) {
         console.log(event);
         setSubmitLoading(false);
-        await Alubot.sendDiscordNotification(fields);
 
         return history.push(`/obrigado/${data[0][12]}`);
       } else {
@@ -147,9 +162,7 @@ export default function CourseNew(props) {
 
   };
 
-  const handleModalOpen = event => {
-    setisOpen(true);
-  };
+  const handleModalOpen = () => setisOpen(true);
 
   const isAlumeca = data[0] && data[0][15] === "TRUE";
 
@@ -194,9 +207,24 @@ export default function CourseNew(props) {
                   />
                 </FormControl>
               </Stack>
+
+              <Box marginTop={4}>
+                <Checkbox
+                  onChange={e => setIsCheckboxChecked(e.target.checked)}
+                >
+                  <p>Li e concordo com o a</p>
+                </Checkbox>
+                <Link
+                  href="/politica-de-cookies"
+                  target="_blank"
+                  marginLeft={1}
+                >política de cookies <ExternalLinkIcon /></Link>
+              </Box>
+
+
             </ModalBody>
             <ModalFooter>
-              <div className="modal-cta" style={{width: '100%'}}>
+              <div className="modal-cta" style={{ width: '100%' }}>
                 <Button
                   w="100%"
                   margin="0px 0px 20px 0px"
@@ -289,7 +317,8 @@ export default function CourseNew(props) {
         courseName={data[0] && data[0][9]}
       />
       <PosFooter />
-
+      
+      <WhatsappBtn />
       <LGPDDrawer />
     </div>
   )

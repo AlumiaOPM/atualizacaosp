@@ -2,6 +2,8 @@ import React from 'react';
 import Provider from '../Provider';
 import { Link } from '@chakra-ui/react';
 
+import { Link as LinkButton } from 'react-router-dom';
+
 import {
   Button,
   Skeleton,
@@ -24,7 +26,7 @@ export default function CourseHead({
 
   const CTADynamic = () => (
     <div>
-      {loading && 
+      {loading &&
         <Skeleton height="40px" minWidth="180px" isLoaded={!loading} />
       }
       {!loading && isAlumeca &&
@@ -43,7 +45,7 @@ export default function CourseHead({
             }}
           >
             INSCREVER-SE
-          <ExternalLinkIcon marginLeft="2" />
+            <ExternalLinkIcon marginLeft="2" />
           </Button>
         </Link>}
       {!loading && !isAlumeca &&
@@ -61,7 +63,7 @@ export default function CourseHead({
           }}
         >
           SAIBA MAIS
-      </Button>}
+        </Button>}
     </div>
   )
 
@@ -72,7 +74,9 @@ export default function CourseHead({
         <div className="row">
           <div className="course-head">
             <div className="logo">
-              <img src={logo} alt="logo" />
+              <LinkButton to="/">
+                <img src={logo} alt="logo" />
+              </LinkButton>
               <div className="container-header-cta">
                 <CTADynamic />
               </div>

@@ -23,6 +23,7 @@ import LGPDDrawer from '../../components/LGPDDrawer';
 import DiscountBannerNew from '../../components/DiscountBannerNew';
 import FooterNew from '../../components/FooterNew';
 import PosFooter from '../../components/PosFooter';
+import WhatsappBtn from '../../components/WhatsappBtn';
 
 import { getCourseDataAndThumbnails } from '../../services/api';
 
@@ -257,6 +258,8 @@ export default function Home() {
           Enviado com sucesso! Em nossa próxima turma, avisaremos você!
         </Alert>
       </Slide>
+
+      <WhatsappBtn />
       <FooterNew />
       <PosFooter />
     </div>

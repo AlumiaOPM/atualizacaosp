@@ -49,6 +49,7 @@
 
 :root {
   --section-title-color: #414141;
+  --black: #111;
 }
 
 *:focus{
