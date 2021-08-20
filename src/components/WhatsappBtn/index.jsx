@@ -14,7 +14,7 @@ export default function WhatsappBtn() {
       <a 
           className={styles.whatsappBtn}
           target="_blank"
-          href={`https://api.whatsapp.com/send?phone=${phone}`}
+          href={`https://api.whatsapp.com/send?phone=55011972850590`}
         >
           <Provider>
 
