@@ -80,6 +80,7 @@ export default function CourseNew(props) {
 
     (async function getData() {
       const response = await getCourseDataAndThumbnails();
+      console.log(response)
       const courseinformations = response.filter(item => item[12] === slug);
       if (courseinformations.length <= 0) {
         return history.push(`/404?query=${slug}`);
