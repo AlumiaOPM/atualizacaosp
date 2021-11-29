@@ -25,7 +25,6 @@
 import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { getCourseDataAndThumbnails } from '../../services/api';
-
 import CourseHead from '../../components/CourseHead';
 import CourseInformationNew from '../../components/CourseInformationNew';
 import GenericSectionNew from '../../components/GenericSectionNew';
@@ -98,7 +97,7 @@ export default function CourseNew(props) {
 
   const handleSubmit = async event => {
     event.preventDefault();
-    if(!isCheckboxChecked)
+    if (!isCheckboxChecked)
       return toast({
         isClosable: true,
         variant: "solid",
@@ -300,6 +299,9 @@ export default function CourseNew(props) {
           valor={data[0] && data[0][14]}
           cartLink={cartLink}
           sectionId="investimento"
+          handleModalOpen={handleModalOpen}
+          isAlumeca={isAlumeca}
+          cartLink={cartLink}
         />
       }
 
@@ -318,7 +320,7 @@ export default function CourseNew(props) {
         courseName={data[0] && data[0][9]}
       />
       <PosFooter />
-      
+
       <WhatsappBtn />
       <LGPDDrawer />
     </div>

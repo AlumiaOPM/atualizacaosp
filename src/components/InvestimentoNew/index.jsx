@@ -9,7 +9,7 @@ import { IconContext } from 'react-icons';
 
 import './index.css';
 
-export default function Investimento({ valor, cartLink, sectionId }) {
+export default function Investimento({ valor, cartLink, sectionId, handleModalOpen }) {
   const semCifrao =
     valor && valor
       .replace('R$ ', '')
@@ -57,12 +57,13 @@ export default function Investimento({ valor, cartLink, sectionId }) {
           </div>
 
           <div className="investimento-new-cta">
-            <Link isExternal href={cartLink}>
+            <Link>
               <Button
                 colorScheme="black"
                 width="100%"
                 height="54px"
                 variant="solid"
+                onClick={handleModalOpen}
               >
                 INSCREVER-SE
               <ExternalLinkIcon marginLeft="2" />

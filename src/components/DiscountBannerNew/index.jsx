@@ -24,7 +24,11 @@ export default function DiscountBannerNew({ cartLink, handleModalOpen }) {
   }
 
   return (
-    <div className="discount-banner">
+    <>
+      {
+        window.location.pathname !== "/formacao-em-marketing-product-management-parceria-le-wagon" ? 
+        (
+          <div className="discount-banner">
       <Provider>
 
         <div className="discount-container">
@@ -40,5 +44,25 @@ export default function DiscountBannerNew({ cartLink, handleModalOpen }) {
 
       </Provider>
     </div>
+        )
+        :
+        <div className="discount-banner">
+        <Provider>
+  
+          <div className="discount-container">
+            <Stamp 
+              discount={20}
+              text="No valor integral do curso para Alunos e Ex-alunos da Graduação e Pós-Graduação ESPM"
+            />
+            <Stamp 
+              discount={5}
+              text="No valor integral do curso para alunos e ex-alunos dos cursos de extensão da ESPM"
+            />
+          </div>
+  
+        </Provider>
+      </div>
+      }
+    </>
   )
 }

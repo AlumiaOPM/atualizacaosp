@@ -200,3 +200,209 @@
   }
 
 }
+
+
+
+.header-course2 {
+  background: url("../../assets/Banner_Le_Wagon.jpg");
+  background-position: top right;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -ms-background-attachment: fixed;
+  -moz-background-attachment: fixed;
+  -o-background-attachment: fixed;
+  -webkit-background-attachment: fixed;
+  background-position-x: left;
+}
+
+.header-course2:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.header-course2 .logo {
+  width: 100%;
+  height: inherit;
+}
+
+.header-course2 .row:first-child .course-head,
+.header-course2 .row:first-child .course-head .nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.header-course2 .row:first-child .nav {
+  justify-content: space-around;
+  padding: 28px 0px;
+}
+
+.header-course2 .row:first-child .course-head .nav a {
+  margin: 0px 36px;
+  color: #fff;
+  width: 130px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1em;
+  font-family: "Heebo", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.header-course2 .row:first-child .course-head .nav a:hover {
+  text-decoration: underline;
+}
+
+.header-course2 .row:first-child .course-head a:last-child {
+  margin: 0px 1.56rem;
+}
+
+.header-course2 .row:first-child .course-head a:last-child:hover {
+  text-decoration: none;
+}
+
+.header-course2 .row:first-child .course-head .logo .container-header-cta {
+  display: none;
+}
+
+.header-course2 .row:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 180px;
+}
+
+.header-course2 h2.subtitle {
+  font-family: "Open sans", sans-serif;
+  font-size: 1em;
+  font-weight: 200;
+  color: #fff;
+  z-index: 10;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.header-course2 h2.subtitle:last-child {
+  font-size: 1.5rem;
+  margin: 20px auto;
+}
+
+.header-course2 .title {
+  text-align: center;
+}
+
+.header-course2 .title h1 {
+  font-size: 5em;
+  color: #fff;
+  font-weight: 900;
+  line-height: 80px;
+  position: relative;
+  text-shadow: 0px 0px 25px #111111;
+  z-index: 1;
+  font-family: "Exo", sans-serif;
+  text-transform: uppercase;
+  word-wrap: normal;
+  width: auto;
+}
+
+.header-course2 .title h1:before {
+  content: '';
+  background: #fff;
+  width: 66px;
+  height: 3px;
+  border-radius: 4px;
+  display: block;
+  position: relative;
+  margin: 20px auto;
+}
+
+.header-course2 .title p {
+  color: #f1f1f1;
+  font-size: 22px;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 767px){
+  .header-course2 {
+    padding: 0px;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  .header-course2 .title h1{
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  .header-course2 h2.subtitle {
+    font-size: 0.9rem;
+  }
+
+  .header-course2 h2.subtitle:last-child {
+    font-size: 1.2rem;
+  }
+
+  .header-course2 .row:first-child .course-head {
+    position: relative;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  .header-course2 .row:first-child .course-head .nav {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    transform: translateX(100%);
+    display: none;
+  }
+
+  .header-course2 .row:first-child .course-head .logo {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header-course2 .row:first-child .course-head .logo .container-header-cta {
+    position: relative;
+    display: block;
+  }
+
+  .header-course2 .row:last-child {
+    padding: 56px 28px 42px 28px;
+  }
+
+  .inicio {
+    flex-direction: column;
+  }
+
+  .inicio p {
+    margin: 6px auto;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .header-course2 .row:first-child .course-head a:last-child {
+    margin: 0px;
+  }
+
+}
+
