@@ -2,6 +2,10 @@
   background: linear-gradient(to bottom, #723090, #B8147E);
   padding-top: 54px;
 }
+.courseInformationNewPos {
+  background: linear-gradient(to bottom, #900033, #ff0047);
+  padding-top: 54px;
+}
 
 .courseInformation-flexSection {
   width: 100%;

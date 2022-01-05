@@ -22,7 +22,7 @@
 
 "use-strict";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { getCourseDataAndThumbnails } from '../../services/api';
 import CourseHead from '../../components/CourseHead';
@@ -37,6 +37,8 @@ import FooterNew from '../../components/FooterNew';
 import PosFooter from '../../components/PosFooter';
 import LGPDDrawer from '../../components/LGPDDrawer';
 import WhatsappBtn from '../../components/WhatsappBtn';
+import PopupDiscount from '../../components/PopupDiscount';
+import "./index.css"
 
 import {
   ModalHeader,
@@ -68,6 +70,7 @@ export default function CourseNew(props) {
   const [submitLoading, setSubmitLoading] = React.useState(false);
   const [isOpen, setisOpen] = React.useState(false);
   const toast = useToast();
+  
   const [fields, setFields] = React.useState({
     error: false,
     nome_completo: '',
@@ -90,6 +93,7 @@ export default function CourseNew(props) {
     })()
 
   }, [])
+ 
 
   const cartLink = data[0] && data[0][4];
 
@@ -212,15 +216,21 @@ export default function CourseNew(props) {
                 <Checkbox
                   onChange={e => setIsCheckboxChecked(e.target.checked)}
                 >
-                  <p>Li e concordo com o a</p>
-                </Checkbox>
-                <Link
-                  href="/politica-de-cookies"
-                  target="_blank"
-                  marginLeft={1}
-                >política de cookies <ExternalLinkIcon /></Link>
-              </Box>
 
+                  Li e concordo com a <Link
+                    href="/politica-de-cookies"
+                    target="_blank"
+                    marginLeft={1}
+                    className="link_lgpd"
+
+                  >
+                    política de privacidade,
+                  </Link> e aceito receber toda e qualquer comunicação do time ESPM com os dados pessoais fornecidos acima.  <ExternalLinkIcon />
+
+                </Checkbox>
+
+
+              </Box>
 
             </ModalBody>
             <ModalFooter>
@@ -253,7 +263,7 @@ export default function CourseNew(props) {
         cartLink={cartLink}
       />
 
-      {data &&
+{data &&
         <CourseInformationNew
           hero={data[0] && data[0][7]}
           cartLink={cartLink}
@@ -323,6 +333,9 @@ export default function CourseNew(props) {
 
       <WhatsappBtn />
       <LGPDDrawer />
+      
+      
+      
     </div>
   )
 }

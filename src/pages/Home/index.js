@@ -24,6 +24,7 @@ import DiscountBannerNew from '../../components/DiscountBannerNew';
 import FooterNew from '../../components/FooterNew';
 import PosFooter from '../../components/PosFooter';
 import WhatsappBtn from '../../components/WhatsappBtn';
+import PopupDiscount from '../../components/PopupDiscount/index';
 
 import { getCourseDataAndThumbnails } from '../../services/api';
 
@@ -245,7 +246,7 @@ export default function Home() {
         }}
       />
 
-      <LGPDDrawer />
+      
 
       <Slide
         direction="bottom"
@@ -262,6 +263,9 @@ export default function Home() {
       <WhatsappBtn />
       <FooterNew />
       <PosFooter />
+      <LGPDDrawer />
+      
+      
     </div>
 
   )
