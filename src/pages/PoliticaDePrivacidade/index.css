@@ -1,0 +1,27 @@
+.lgpd{
+  max-width:1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px;
+  
+}
+
+.lgpd li{
+  padding: 10px 0;
+ 
+}
+.lgpd h1{
+  
+  font-size: 36px;
+}
+.main-list{
+
+
+  font-family: "roboto";
+  font-weight: 900 !important;
+  padding: 15px 0;
+}
+.sub-items{
+  list-style-type: lower-roman !important;
+  
+}

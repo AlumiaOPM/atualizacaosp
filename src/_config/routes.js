@@ -6,6 +6,7 @@ import Course from '../pages/Course';
 import NotFound from '../pages/NotFound';
 
 import PoliticaDePrivacidade from '../pages/PoliticaDePrivacidade';
+import PoliticaDeCookies from '../pages/PoliticaDeCookies';
 import ThankyouPageNew from '../pages/ThankyouPageNew';
 
 export default function Routes() {
@@ -19,7 +20,8 @@ export default function Routes() {
 				</Route>
 				
 				<Route exact path="/404" component={NotFound} />
-				<Route exact path="/politica-de-cookies" component={PoliticaDePrivacidade} />
+				<Route exact path="/politica-de-privacidade" component={PoliticaDePrivacidade} />
+				<Route exact path="/politica-de-cookies" component={PoliticaDeCookies} />
 
 				<Route exact path="/:slug">
 					<Course />

@@ -2,236 +2,209 @@ import React from "react";
 
 import Footer from '../../components/FooterNew';
 
-import styles from './index.module.css';
+
+import './index.css';
 
 export default function PoliticaDePrivacidade() {
-  let article = 'a';
-  let name = 'ESPM';
-  let url = 'https://atualizacaosp.espm.br/';
-  let urlMask = 'atualizacaosp.espm.br';
 
   return (
-    <div>
-      <div className={styles.container}>
-        <h2>Termos e condições de uso</h2>
-        <p>Prezado Usuário,</p>
-        <p>Leia atentamente os Termos e Condições de Uso abaixo, os quais regularão todos os serviços de cursos online oferecidos pel{article} <b>{name}</b>. A partir do momento em que você adquire os cursos, você declara que tem ciência e concorda expressamente com todas as condições aqui citadas. Os Termos de Uso incluem a nossa Política de Privacidade, que contém as regras e condições do uso que fazemos dos seus dados pessoais.</p>
-        <p>{article.toUpperCase()} <b>{name}</b> reserva-se, a qualquer tempo, o direito de alterar, suprimir e/ou ampliar o presente conteúdo sem comunicação prévia ou posterior aos usuários. O usuário deve verificar este documento periodicamente a fim de conhecer eventuais mudanças em seus termos.</p>
+    <>
+
+      <div class="lgpd">
+        <h1>POLÍTICA DE PRIVACIDADE E DADOS PESSOAIS<br />ALUMIA</h1>
 
         <ol>
-          <li>DEFINIÇÕES
-            <ol>
-              <li>Curso: pacote de cursos comercializados e disponibilizados através do site.</li>
-              <li>Site: <a href={url} target="_blank" rel="noreferrer">{urlMask}</a> e seus subdomínios</li>
-              <li>Termos e condições de uso: documento que contém as condições para o acesso ao site e aos cursos.</li>
-              <li>Usuário ou Cliente: Pessoas físicas e jurídicas que adquirem os cursos disponíveis no Site.</li>
-              <li>Partes: <b>{name}</b> e a pessoa física ou jurídica que adquirir os Cursos.</li>
-              <li>Contrato: este documento, que disciplina as condições da compra e venda do curso.</li>
-            </ol>
-          </li>
-          <li>OBJETO
-            <ol>
-              <li>O objeto do presente Contrato é a prestação de serviços educacionais, na modalidade de ensino a distância / online de acordo com a legislação aplicável e com este Contrato, comprometendo-se as partes a cumpri-lo com base na boa-fé e no equilíbrio contratual.</li>
-              <li>Por esse Contrato {article} <b>{name}</b> disponibiliza ao usuário diversas opções de cursos online abordando diferentes temas, sendo os cursos disponibilizados na plataforma.</li>
-              <li> Os cursos disponibilizados, possuem suas características, público alvo, conteúdo programático, duração, número de módulos, dentre outros dados necessários, disponíveis no site  <a href={url} target="_blank" rel="noreferrer">{urlMask}</a> e seus subdomínios</li>
-            </ol>
-          </li>
-          <li>RESPONSABILIDADES E DIREITOS
-            <ol>
-              <li>{article.toUpperCase()} {name} compromete-se a:
-                <ol>
-                  <li>prestar os serviços dentro dos prazos, dos parâmetros e das rotinas estabelecidos neste contrato, com a observância dos preceitos éticos e profissionais e das recomendações aceitas pela boa técnica, pelas normas e pela legislação pertinente;</li>
-                  <li>informar aos usuários ou clientes as atividades programadas para os cursos contratados;</li>
-                  <li>disponibilizar o material didático dos cursos ao usuário, possibilitando a realização do download de textos e infográficos;</li>
-                  <li>disponibilizar “conta-logon” e senha ao usuário para acesso ao conteúdo dos cursos;</li>
-                  <li>disponibilizar orientações necessárias sobre o curso ao usuários, por meio de um endereço eletrônico; e</li>
-                  <li>disponibilizar ao usuário ferramenta para emissão de certificado de conclusão ao usuário, caso este conclua o curso.</li>
-                </ol>
-              </li>
-              <li>O USUÁRIO compromete-se a:
-                <ol>
-                  <li>efetuar o pagamento dos cursos conforme convencionado, nos prazos e formas contratados;</li>
-                  <li>utilizar-se de equipamentos e softwares, com os requisitos mínimos exigidos com acesso à internet e possuir um endereço eletrônico e telefone para permanentemente contato d{article} <b>{name}</b>;</li>
-                  <li>zelar pela confidencialidade de sua senha e login, de forma a não permitir compartilhamento;</li>
-                  <li>responder a todas as mensagens recebidas no prazo estabelecido pel{article} <b>{name}</b>;</li>
-                  <li>se aplicável participar das avaliações propostas segundo normas estabelecidas pel{article} <b>{name}</b>;</li>
-                  <li>acessar os cursos a qualquer momento e quantas vezes desejar com comodidade e privacidade, durante o período contratado. Decorrido este prazo, o acesso será bloqueado automaticamente.</li>
-                </ol>
-              </li>
-            </ol>
-          </li>
-          <li>INFORMAÇÕES SOBRE OS CURSOS ONLINE
-            <ol>
-              <li>O CNPJ d{article} <b>{name}</b> está registrado e autorizado a oferecer cursos na modalidade Online.</li>
-              <li>Os cursos online ficam disponíveis na conta do usuário na plataforma online indicada, pelo período de vigência do plano contratado. Durante esse período o usuário poderá assistir os conteúdos digitais e multimídias quantas vezes julgar necessário.</li>
-              <li>É de responsabilidade do usuário, antes da aquisição dos cursos verificar o conteúdo disponível, pré-requisitos para realização dos cursos, sendo necessários cumpri-los, seja na aquisição de outros cursos ou no conhecimento de ferramentas, sistemas ou softwares.</li>
-              <li>O usuário deverá usar os softwares ou sistema nas mesmas versões aplicadas aos cursos, sendo de responsabilidade do usuário conferir as versões de cada software e suas especificações disponíveis na página dos cursos.</li>
-              <li>As licenças dos softwares utilizados nos cursos não serão disponibilizadas aos usuários, sendo que, as mesmas deverão ser adquiridas junto às empresas detentoras dos softwares.</li>
-              <li>Os professores, administradores ou moderadores poderão prestar suporte ao usuário que esteja utilizando versão de software ou sistema diferente da recomendada, visando sanar eventuais dúvidas.</li>
-            </ol>
-          </li>
-          <li>FORMAS DE PAGAMENTO
-            <ol>
-              <li>No momento da aquisição dos cursos o usuário ou cliente deverá escolher a forma de pagamento, dentre elas, são disponibilizadas cartão de crédito onde as compras poderão ser parceladas nos termos e condições descritos no site.</li>
-              <li>Em ambas as formas de pagamento o usuário ou cliente é responsável pelo preenchimento correto das informações necessárias no ato da compra.</li>
-              <li>Caso o usuário ou cliente opte pelo pagamento parcelado no cartão de crédito, a quitação do débito é de responsabilidade do mesmo junto à operadora de cartão.
-                <ol>
-                  <li>O pagamento realizado por meio de cartão de crédito se dará por empresa indicada no site que será responsável pela conexão segura, não possuindo {article} <b>{name}</b> acesso a dados de pagamento.</li>
-                  <li>É de responsabilidade do usuário ou cliente manter seus computadores, dispositivos e redes seguras com proteção adequada visando evitar quaisquer problemas durante pagamentos realizados pela internet.</li>
-                </ol>
-              </li>
-              <li>Caso o usuário ou cliente opte pelo pagamento mediante emissão de boleto e o pagamento não ocorra até a data de seu vencimento, as partes convencionam que o boleto será automaticamente cancelado, devendo o usuário realizar nova compra.</li>
-              <li>Compete exclusivamente a <b>{name}</b> definir a sua política comercial e os seus critérios para concessão de descontos e modalidades de pagamento.</li>
-              <li>A assinatura ou aquisição de curso poderá ser cancelada até o início do curso, onde será cobrado uma multa de 20% no valor pago. Depois do início, caso haja cancelamento, o cliente ou usuário pagará pelo tempo estudado.</li>
-              <li>O cancelamento da assinatura, seja por requerimento prévio junto a <b>{name}</b> ou por solicitação unilateral junto a operadora de cartão de crédito, resultará na interrupção de acesso aos cursos imediatamente.</li>
-              <li>{article.toUpperCase()} <b>{name}</b> poderá cancelar a assinatura do usuário sem devolução do pagamento a qualquer momento sem aviso ou notificação prévia, caso identifique utilização indevida ou ilicitudes que firam os termos deste contrato.
-                <ol>
-                  <li>Caso o usuário tenha sua assinatura cancelada, seu acesso à plataforma poderá ser bloqueado ficando o mesmo impedido de realizar novas assinaturas.</li>
-                </ol>
-              </li>
-            </ol>
-          </li>
-          <li>ALTERAÇÕES DE PREÇOS
-            <ol>
-              <li>As alterações dos valores serão aplicadas em novas assinaturas ou na aquisição de novos cursos, os usuários que já possuem assinatura continuarão pagando os mesmos valores sem a incidência de aumento ou decréscimo.</li>
-            </ol>
-          </li>
+          <li class="main-list"> OBJETIVO </li>
+          <p>Informar todos os clientes e usuários da ALUMIA e de suas plataformas, também como Operadora em nome de seus contratantes, no que refere à aplicação do Lei Geral de Proteção de Dados - LGPD.  Para todos os fins, os dados cadastrais da ALUMIA são: OPM EDUCACIONAL LTDA., inscrita no CNPJ sob o nº 27.557.874/0001-09.</p>
+
+          <li class="main-list">ÂMBITO </li>
+          <p>Aplica-se a todos os clientes e usuários da ALUMIA. </p>
+
+          <li class="main-list">DESCRIÇÃO DO PROCESSO </li>
+          <p>A ALUMIA necessita colher e tratar dados pessoais de usuários para compartilhamento, atuando na função de Operadora, nos exatos termos da Lei Geral de Proteção de Dados. Ou seja, a ALUMIA coleta, trata e armazena dados pessoais sempre por conta de ordem de um terceiro, que é o Controlador, cujos dados pessoais são destinados. Neste sentido, a presente Política de Privacidade e Dados Pessoais da ALUMIA (doravante “Política da Privacidade”), visa ajudar os nossos clientes a compreender quais dados pessoais recolhemos, como e por que motivo os usamos, a quem  divulgamos e como protegemos a sua privacidade quando utilizam os nossos serviços. </p>
+
+          <li class="main-list">PORQUÊ? </li>
+          <p>A ALUMIA está empenhada em proteger a segurança e a privacidade dos seus clientes. Neste contexto, elaborou a presente Política de Privacidade, com a finalidade de afirmar o seu compromisso e respeito para com as regras de privacidade e de proteção de dados pessoais. </p>
+
+          <p>Pretendemos que os nossos clientes conheçam as regras gerais de privacidade e os termos de tratamento dos dados que recolhemos, no estreito cumprimento da legislação aplicável neste âmbito, nomeadamente Lei nº 13.709, de 14 de Agosto de 2018 (“Lei Geral de Proteção de Dados - LGPD” ou simplesmente “LGPD”). </p>
+
+          <p>A ALUMIA procura respeitar as melhores práticas em matéria de segurança e proteção de dados pessoais, de promoção/sensibilização para as boas práticas neste âmbito, e melhorando sistemas de forma a gerir a proteção de dados que lhe são disponibilizados pelos seus clientes, no estreito cumprimento das obrigações legais. </p>
+
+          <p>O preenchimento dos formulários de recolhimento de dados e o fornecimento de dados direta ou indiretamente, implicam o conhecimento das condições desta Política, e de quaisquer outros termos, políticas e condições específicas referentes aos serviços prestados. </p>
+
+          <li class="main-list">O QUE SÃO DADOS PESSOAIS? </li>
+
+          <p>Entende-se por dados pessoais qualquer informação relacionada a pessoa natural identificada ou identificável (titular dos dados), de qualquer natureza e independentemente do respetivo suporte. É considerada identificável a pessoa que possa ser identificada direta ou indiretamente, designadamente por referência a um número de identificação ou a mais elementos específicos da sua identidade física, fisiológica, psíquica, econômica, cultural ou social. </p>
+          <p>Os dados pessoais poderão ter uma natureza diferenciada em determinadas situações, classificando-os a LGPD como “dados sensíveis”. Estes podem versar sobre a origem racial ou étnica do seu titular, as suas opiniões políticas, as suas convicções religiosas ou filosóficas, informação genética, identificadores biométricos, vida sexual, orientação sexual ou sobre a sua saúde.</p>
+
+          <li class="main-list">OUTRAS DEFINIÇÕES IMPORTANTES </li>
+          <ul class="sub-items">
+
+            <li> Consentimento do titular dos dados – manifestação de vontade, livre, específica, informada e explícita, pela qual o titular dos dados aceita, mediante declaração ou ato positivo inequívoco, que os dados pessoais que lhe dizem respeito sejam objeto de tratamento; </li>
+
+            <li>Controlador: Pessoa natural ou jurídica, de direito público ou privado, a quem competem as decisões referentes ao tratamento dos dados pessoais;</li>
+
+            <li> Definição de perfis – qualquer forma de tratamento automatizado de dados pessoais que consista na utilização desses dados pessoais para, nomeadamente, incluir uma pessoa singular em determinada categoria, respeitante ao seu desempenho profissional, à sua situação econômica, saúde, preferências pessoais, interesses, comportamento, localização ou deslocações; </li>
+
+            <li> Encarregado da proteção de dados (Data Protection Officer – “DPO”) – pessoa ou entidade nomeada para garantir, numa organização, a conformidade do tratamento de dados pessoais com o LGPD, assegurando a comunicação eficiente com os titulares dos dados e a cooperação com as autoridades de controle, fazendo ainda a ponte com as diferentes áreas de atividade dentro da ALUMIA. O DPO não recebe instruções relativamente ao exercício das suas funções, respondendo diretamente aos órgãos de direção da entidade que o nomeou; </li>
+
+            <li>Responsável pelo tratamento – pessoa singular ou coletiva, autoridade pública, agência ou outro organismo que, individualmente ou em conjunto com outras, determina as finalidades e os meios de tratamento de dados pessoais;</li>
+
+            <li>Terceiro – pessoa singular ou coletiva, serviço ou organismo que não seja o titular dos dados, o Controlador, o Operador e as pessoas que, sob a autoridade direta do Controlador ou do Operador, estão autorizadas a tratar os dados pessoais; </li>
+
+            <li>  Titular dos dados – pessoa singular identificada ou identificável a quem os dados pessoais dizem respeito; </li>
+
+            <li> Tratamento – operação ou conjunto de operações efetuadas sobre dados pessoais ou sobre conjuntos de dados pessoais, por meios automatizados ou não automatizados, tais como coleta, registo, organização, estruturação, conservação, adaptação ou alteração, recuperação, consulta, utilização, divulgação por transmissão, difusão ou qualquer outra forma de disponibilização, comparação ou interconexão, a limitação, o apagamento ou a destruição; </li>
+
+            <li>Operador: Pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do controlador;</li>
+
+            <li>Violação de dados pessoais – violação da segurança que provoque, de modo acidental ou ilícito, a destruição, a perda, a alteração, a divulgação ou o acesso, não autorizados, a dados pessoais transmitidos, conservados ou sujeitos a qualquer outro tipo de tratamento; </li>
+
+            <li>Pseudonimização – o tratamento de dados pessoais de forma que deixem de poder ser atribuídos a um titular de dados específico sem recorrer a informações suplementares, desde que essas informações suplementares sejam mantidas separadamente e sujeitas a medidas técnicas e organizativas para assegurar que os dados pessoais não possam ser atribuídos a uma pessoa singular identificada ou identificável; </li>
+
+            <li>Anonimização – técnica que resulta do tratamento de dados pessoais a fim de lhes retirar elementos suficientes para que deixe de ser possível identificar o titular dos dados, de forma irreversível. Mais precisamente, os dados têm de ser tratados de forma a que já não possam ser utilizados para identificar uma pessoa singular utilizando o conjunto dos meios suscetíveis de serem razoavelmente utilizados, seja pelo responsável pelo tratamento, seja por terceiros. </li>
+
+            <li>Autoridade Nacional de Proteção de Dados – Órgão da administração pública responsável por zelar, implementar e fiscalizar o cumprimento da lei; </li>
+          </ul>
+
+          <li class="main-list">QUEM É O RESPONSÁVEL PELO TRATAMENTO DOS SEUS DADOS PESSOAIS? </li>
+
+          <p>A presente Política de Privacidade visa dar conhecimento aos clientes a respeito dos termos de tratamento de dados pessoais da ALUMIA, determinando as finalidades e meios de tratamento dos seus dados no contexto da prestação de serviços, pelo que a ALUMIA deve ser considerada como Operadora, nos termos do LGPD. </p>
+
+          <p>Assim, se houver qualquer tipo de questionamento a respeito da privacidade dos dados, solicitamos que também seja indicado o Controlador, quando for o caso, para fins de apuração de eventual infração, dolo, negligência, imprudência ou imperícia.</p>
+
+          <li class="main-list">QUE DADOS PESSOAIS RECOLHEMOS E ATRAVÉS DE QUE MEIOS? </li>
+
+          <p>A ALUMIA coleta informações pessoais fornecidas pelos usuários, informações estas capazes de identificá-lo. Estas informações coletadas podem variar de acordo com o seu uso da ALUMIA, bem como com o tipo de informação que você opta a nos fornecer.</p>
+
+          <p>Para bom andamento da prestação do serviço, o usuário da ALUMIA fornece algumas informações cadastrais, que são direcionadas posteriormente ao Controlador dos dados pessoais. A ALUMIA pode utilizar sistema específico, pelo qual outras informações também são fornecidas. </p>
+
+          <p>Todas essas informações coletadas pela ALUMIA são cumulativas, a fim de que a ALUMIA e seus Operadores possam prover um melhor serviço.</p>
+
+
+          <li class="main-list">CATEGORIA DE DADOS TRABALHADOS, MEIOS E FORMAS DE COLETA</li>
+
+          <p>O cliente será sempre devidamente informado da obrigatoriedade da disponibilização destes dados para continuar o processo de cadastramento junto a ALUMIA.</p>
+
+          <p>A ALUMIA não coleta dados sensíveis.</p>
+
+
+          <li class="main-list">QUAIS AS FINALIDADES DA COLETA DOS SEUS DADOS PESSOAIS? </li>
+
+          <p>Os dados pessoais recebidos só poderão ser utilizados para a finalidade contratada. Caso a ALUMIA realize tratamento diverso do consentido, por força de relação contratual com o Controlador, deverá obter novo consentimento do titular do dado.</p>
+
+          <p>A base legal utilizada para o tratamento dos dados pessoais é a execução do contrato e o legítimo interesse, portanto, não há necessidade da ALUMIA obter o consentimento do titular do dado. A finalidade para o tratamento do dado deve ser específica, salvo legítimo interesse do controlador.</p>
+
+          <p>Podemos usar as categorias de informações pessoais mencionadas acima para um ou mais dos seguintes fins comerciais:</p>
+          <ul id="dot-black-list">
+            <li>Para processar sua solicitação de informações (por exemplo, produtos/serviços, oportunidades de Consultor Independente).</li>
+            <li>Para processar transações de produtos e serviços e enviar avisos sobre suas transações.</li>
+            <li>Fornecer suporte de vendas e atendimento ao cliente, bem como garantia de qualidade.</li>
+            <li>Para cumprir ou atender o motivo pelo qual as informações são fornecidas. </li>
+            <li>Para fornecer marketing e publicidade direcionados, fornecer avisos de atualização de serviço e fazer ofertas promocionais com base em suas preferências de comunicação.</li>
+            <li>Para permitir e-mails para amigos. Podemos fornecer funcionalidade para permitir que você envie mensagens sobre o conteúdo relacionado ao Site a um amigo através do Site. Se desejar usar este recurso, você pode nos fornecer o endereço de e-mail do seu amigo para que possamos facilitar o envio da sua mensagem para ele.</li>
+            <li>Para verificar sua identidade, incluindo questões relacionadas à conta.</li>
+            <li>Para enviar comunicações administrativas relativas ao Site, anúncios relacionados a serviços, etc., que são necessários para atendê-lo, responder às suas preocupações e fornecer o alto nível de atendimento ao cliente que a ALUMIA oferece. Como essas informações podem ser importantes para o seu uso do Site, você não pode cancelar o recebimento de tais comunicações, a menos que retire explicitamente o seu consentimento para nosso uso de suas informações pessoais conforme descrito nesta Política de Privacidade.</li>
+            <li>Para revisar/gerenciar o uso e as operações do Site e para conformidade com nossos Termos de Uso e a lei.</li>
+            <li>Para resolver problemas com o Site, nosso negócio ou nossos serviços.</li>
+            <li>Para contatá-lo em qualquer número de telefone, através de uma chamada de voz ou através de mensagens de texto (SMS) ou e-mail, conforme autorizado pelos nossos Termos e Condições.</li>
+            <li>Para detectar, prevenir ou investigar violações de segurança, fraude ou outra atividade suspeita/proibida/ilegal; ou violações de nossa Política de Privacidade.</li>
+            <li>Manter registros apropriados para fins administrativos internos.</li>
+            <li>Para fornecer informações importantes sobre segurança do produto.</li>
+            <li>Usamos o seu endereço IP e os endereços IP de todos os usuários, para fins de cálculo dos níveis de uso do Site, ajudar a diagnosticar problemas com os servidores do Site, administrar o Site, analisar tendências, estatísticas/pesquisas internas, incluindo detecção e prevenção de atividades suspeitas, administrar o Site, rastrear padrões de tráfego e reunir informações demográficas para uso agregado.</li>
+            <li>Para melhorar nosso site e apresentar o conteúdo a você.</li>
+            <li>Para testes, pesquisas, análises e desenvolvimento de produtos.</li>
+            <li>Conforme descrito a você ao coletar suas informações pessoais.</li>
+            <li>Podemos usar essas tecnologias para coletar informações para uma variedade de propósitos, como analisar como o Site é usado, personalizar sua experiência no Site ou melhorar nosso conteúdo ou ofertas. Seu navegador pode fornecer ferramentas para bloquear ou deletar cookies. No entanto, se o seu navegador estiver configurado para rejeitar cookies ou você os deleta manualmente, poderá ter alguns problemas para acessar e usar algumas das páginas e recursos que estão atualmente em nosso Site, ou que poderemos colocar em nosso Site no futuro. (cookies)</li>
+          </ul>
+
+
+          <li class="main-list">COM QUE FUNDAMENTO TRATAMOS OS SEUS DADOS PESSOAIS? </li>
+
+          <p>A ALUMIA é uma plataforma de desenvolvimento de  programas EaD exclusivos e personalizados para instituições de ensino e, para tanto, é preciso tratar alguns dados pessoais para a realização desse serviço. A LGPD exige, para que o tratamento de dados pessoais seja lícito, que exista um fundamento de licitude adequado para cada tratamento específico. </p>
+
+          <p>Relativamente aos tratamentos dos seus dados efetuados pela ALUMIA para melhorar os nossos serviços e cumprir os nossos objetivos administrativos e de qualidade, o fundamento de licitude adequado será a prossecução de interesses legítimos bem como Cumprimento Contratual, quando aplicável, além do próprio consentimento do cliente. Tal implica que os titulares dos dados possam opor-se ao tratamento dos seus dados para os efeitos acima referidos, ao abrigo do LGPD, caso apresentem motivos válidos relacionados com a sua situação particular. Em tal eventualidade, o Controlador poderá apresentar razões legítimas que justifiquem a continuação desse tratamento, caso em que se reserva o direito de continuar a tratar os seus dados para esses efeitos, tal como nos casos em que tal tratamento seja necessário para efeitos de declaração, exercício ou defesa de um direito em processo judicial. </p>
+
+          <p>Já relativamente ao tratamento de dados realizado pela ALUMIA no contexto do cumprimento de obrigações legais, o fundamento de licitude para a realização de tais tratamentos – na sua maioria, comunicações de dados para entidades externas – será a necessidade do tratamento para o efeito do cumprimento de obrigações jurídicas do Controlador, inclusive cumprimento contratual ou legítimo interesse. </p>
+
+          <li class="main-list">QUE PROFISSIONAIS DA ALUMIA TÊM ACESSO AOS SEUS DADOS? </li>
+
+          <p>No âmbito do tratamento dos seus dados pessoais, a ALUMIA observa, a todo o tempo, os princípios da proteção de dados desde a concepção (privacy by design). Tal compromisso implica, entre outros aspetos, que os seus dados pessoais serão de acesso limitado às pessoas que tenham necessidade de conhecer no exercício das suas funções, na estrita medida do necessário para a prossecução das finalidades de tratamento que já elencamos acima. </p>
+
+          <li class="main-list">QUAL O PERÍODO DE CONSERVAÇÃO DOS SEUS DADOS PESSOAIS? </li>
+
+          <p>O controlador (cliente) envia sua base de dados com os dados pessoais que serão tratados pela ALUMIA (Operador). Tais dados são conservados em um formato que permita a identificação dos titulares dos dados apenas durante o período necessário para as finalidades para as quais são tratados. </p>
+
+          <p>Após o fim dos serviços, os dados são devolvidos ao cliente, entretanto, em razão se segurança jurídica, alguns dados ficam armazenados em nuvem (Serviços Cloud) contratada pela ALUMIA.</p>
+
+          <li class="main-list">QUAIS OS DIREITOS DOS TITULARES DOS DADOS? </li>
+
+          <p>Nos termos da legislação aplicável, o titular dos dados poderá solicitar, a todo o tempo, o acesso aos dados pessoais que lhe digam respeito, bem como à sua retificação, à portabilidade dos seus dados, diretamente através do e-mail privacidade@alumia.online, ou mediante contato presencial com a ALUMIA. </p>
+
+          <p>O titular dos dados tem direito a:</p>
+          <ul>
+            <li>Solicitar detalhes sobre as categorias de informações pessoais coletadas sobre você e, se permitido e prático, uma cópia das informações pessoais (portabilidade de dados).</li>
+            <li>Solicitar a exclusão de qualquer informação pessoal que coletamos de você, sujeito a certas exceções. Assim que sua solicitação for verificada, daremos prosseguimento a ela, a menos que uma exceção se aplique. Existe a possibilidade de negarmos sua solicitação de exclusão se a retenção das informações for necessária para nós ou nossos provedores de serviço podermos:</li>
+            <li>Concluir a transação para a qual coletamos as informações pessoais, fornecer um bem ou serviço que você solicitou, realizar ações razoavelmente previstas no contexto de nosso relacionamento comercial contínuo com você ou, de outra forma, executar nosso contrato com você.</li>
+            <li>Detectar incidentes de segurança, proteger contra atividades maliciosas, enganosas, fraudulentas ou ilegais ou processar os responsáveis por tais atividades.</li>
+            <li>Depurar produtos para identificar e reparar erros que prejudiquem a funcionalidade pretendida existente.</li>
+            <li>Exercer a liberdade de expressão, garantir o direito de outro consumidor de exercer seus direitos de liberdade de expressão, ou exercer outro direito previsto em lei.</li>
+            <li>Cumprir com a LGPD e legislação competente.</li>
+            <li>Envolver-se em pesquisas públicas ou científicas, históricas ou estatísticas revisadas por pares de interesse público que cumpram todas as outras leis de ética e privacidade aplicáveis, caso a exclusão das informações provavelmente impossibilite ou prejudique seriamente a realização da pesquisa, se você tiver previamente informado seu consentimento.</li>
+            <li>Permitir apenas usos internos que estejam razoavelmente alinhados com as expectativas do consumidor com base em seu relacionamento conosco.</li>
+            <li>Cumprir uma obrigação legal.</li>
+            <li>Fazer outros usos internos e legais dessas informações que sejam compatíveis com o contexto em que você as forneceu.</li>
+          </ul>
+
+          <p>Sem prejuízo de qualquer outra via de recurso administrativo ou judicial, o titular dos dados tem direito a apresentar uma reclamação à ANPD ou a outra autoridade de controle competente nos termos da lei, caso considere que os seus dados não estão sendo objeto de tratamento legítimo por parte da ALUMIA, nos termos da legislação aplicável e da presente Política. </p>
+
+          <li class="main-list">QUAIS AS MEDIDAS DE SEGURANÇA ADOTADAS PELA ALUMIA? </li>
+
+          <p>A ALUMIA está empenhada em assegurar a confidencialidade, proteção e segurança dos dados pessoais dos seus clientes, através da implementação das medidas técnicas e organizativas adequadas para proteger os seus dados contra qualquer forma de tratamento indevido ou ilegítimo e contra qualquer perda acidental ou destruição destes dados. Para o efeito, dispomos de sistemas e equipes destinados a garantir a segurança dos dados pessoais tratados, criando e atualizando procedimentos que previnam acessos não autorizados, perdas acidentais e/ou destruição dos dados pessoais, comprometendo-se a respeitar a legislação relativa à proteção de dados pessoais dos clientes e a tratar estes dados apenas para os fins para que foram recolhidos, assim como a garantir que estes dados são tratados com adequados níveis de segurança e confidencialidade. </p>
+
+          <p>A ALUMIA pode, em alguns casos, transmitir os seus dados pessoais a seus colaboradores e prestadores de serviços internos e terceirizados. A ALUMIA definiu regras claras contratuais no tratamento de dados pessoais com os seus colaboradores, prestadores de serviços internos e terceirizados e exige que estes adotem as medidas técnicas e organizacionais apropriadas para proteger os seus dados pessoais. Contudo, em alguns casos, podemos ser obrigados por lei a divulgar os seus dados pessoais a terceiros (tais como autoridades de controle) relativamente aos quais temos um controle limitado relativamente à proteção dos dados pessoais. </p>
+
+          <p>Pode ser necessário - por lei, processo legal, litígio e/ou solicitações de autoridades públicas e governamentais dentro ou fora de seu país de residência - que a ALUMIA revele suas informações pessoais. Podemos também revelar suas informações se determinarmos que, para propósitos de segurança nacional, imposição da lei ou outros problemas de importância pública, a revelação será necessária ou apropriada.</p>
+
+          <p>Também podemos revelar suas informações se determinarmos que a revelação é razoavelmente necessária para impor nossos termos e condições ou proteger nossas operações ou usuários. Além disso, no caso de uma reorganização, fusão ou venda, podemos transferir qualquer e todas as informações pessoais que coletamos a terceiros relevantes.</p>
+
+
+          <li class="main-list">EM QUE CIRCUNSTÂNCIAS EXISTE COMUNICAÇÃO DE DADOS A OUTRAS ENTIDADES? </li>
+
+          <p>A ALUMIA recorre a outras entidades para a prestação de determinados serviços. Eventualmente essa prestação de serviços poderá implicar o acesso, por estas entidades, a dados pessoais dos seus clientes. </p>
+
+          <p>Assim, qualquer entidade que se caracterize como sub-operador tratará os dados pessoais dos nossos clientes, na estrita obrigação de seguir as instruções do Controlador (cliente). A ALUMIA assegura que tais entidades que se caracterizam por serem sub-operadores oferecem garantias suficientes de execução de medidas técnicas e organizacionais adequadas de forma que o tratamento satisfaça os requisitos da lei aplicável e assegure a segurança e proteção dos direitos dos titulares dos dados, nos termos do acordo de contrato celebrado com o Controlador.</p>
+
+          <p>A ALUMIA poderá, ainda, transmitir dados pessoais dos seus usuários a entidades terceiras, quando julgue tais comunicações de dados como necessárias ou adequadas:</p>
+          <ul>
+            <li>cumprimento contratual, para fins do Controlador;</li>
+            <li>à luz da lei aplicável;</li>
+            <li>no cumprimento de obrigações jurídicas/ordens judiciais, e;</li>
+            <li>para responder a solicitações de autoridades públicas ou governamentais.</li>
+          </ul>
+
+          <p>Neste sentido, a ALUMIA poderá transmitir os dados pessoais à qualquer Entidade Pública, aos Tribunais, Solicitadores, aos órgãos de polícia criminal ou ao Ministério Público quando seja notificado para o efeito ou quando tal seja necessário para o cumprimento de obrigações jurídicas, conforme legalmente previsto.</p>
+
+          <p>Em qualquer das situações acima mencionadas, a ALUMIA compromete-se a tomar todas as medidas razoáveis para garantir a proteção efetiva dos dados pessoais que trata.</p>
+
+          <li class="main-list">CONTATE-NOS </li>
+
+          <p>Poderá contatar o Encarregado de Proteção de Dados (“DPO”) da ALUMIA para mais informações sobre o tratamento dos seus dados pessoais, bem como quaisquer questões relacionadas com o exercício dos direitos que lhe são atribuídos pela legislação aplicável e, em especial, os referidos na presente Política de Privacidade, através dos seguintes contatos:
+            e-mail: privacidade@alumia.online</p>
+
+
+          <li class="main-list">DIREITO À NÃO DISCRIMINAÇÃO PARA O EXERCÍCIO DE SEUS DIREITOS DE PRIVACIDADE</li>
+
+          <p>Não iremos discriminar você por exercer qualquer um dos direitos descritos acima. Isso inclui, mas não se limita a: (i) negar bens ou serviços a você; (ii) cobrar de você preços ou taxas diferentes por bens ou serviços, inclusive por meio do uso de descontos ou outros benefícios ou imposição de penalidades; (iii) fornecer um nível ou qualidade diferente de bens ou serviços; ou (iv) sugerir que você receberá um preço ou taxa diferente por bens ou serviços ou um nível ou qualidade diferente de bens ou serviços.</p>
+
+          <li class="main-list">COMO FICO SABENDO SOBRE AS ALTERAÇÕES DA POLÍTICA DE PRIVACIDADE? </li>
+          <p>A ALUMIA reserva-se o direito de, a qualquer momento, proceder a modificações ou atualizações à presente Política de Privacidade, sendo essas alterações devidamente atualizadas nas nossas Plataformas. Sugerimos que as consulte regularmente para estar a par de eventuais alterações. </p>
         </ol>
 
-        <p><b>E, por ter lido e estar de acordo com o conteúdo do presente instrumento, o (a) CONTRATANTE opta por aceitá-lo em sua integralidade, fazendo com que surtam os efeitos jurídicos próprios.</b></p>
 
-        <h2>Política de Privacidade e Segurança</h2>
 
-        <p>Este documento é parte integrante dos nossos <b>Termos de Uso</b>, que regularão todos os serviços de cursos online oferecidos pel{article} <b>{name}</b>. A presente política tem por finalidade estabelecer as regras de tratamento dos seus dados coletados, além de deixar claro o compromisso d{article} <b>{name}</b> em garantir a proteção dos dados solicitados, em conformidade com a legislação aplicável, ao seguinte domínio: <a href={url} target="_blank" rel="noreferrer">{urlMask}</a> e seus subdomínios. </p>
-        <p><b>Quando você navega em nosso site e toma conhecimento de nossa Política de Privacidade confere sua livre e expressa concordância com os termos aqui estipulados.</b></p>
-        <p>Os conceitos aqui adotados são os conceitos definidos no artigo 5º, da Lei Geral de Proteção de Dados Pessoais (lei nº 13.709/2018), <a href="http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm" rel="noopener">disponível aqui.</a></p>
-
-        <ol>
-          <li>INFORMAÇÕES COLETADAS
-            <p>Coletamos os seus dados conforme o seu acesso e uso dos nossos sites, aplicativos e serviços ofertados pel{article} <b>{name}</b> ou por parceiros que tenham sido devidamente autorizados por nós.</p>
-            <ol>
-              <li>As informações serão coletadas:
-                <ol>
-                  <li>Quando você, voluntariamente, preencher o cadastro disponível em nosso site/aplicativo;</li>
-                  <li>Durante a sua navegação em nossos sites, sendo armazenadas no navegador do seu computador;</li>
-                  <li>Para enviar newsletters ou informar sobre promoções e concursos, desde que você nos dê autorização para isso;</li>
-                  <li>De parceiros que tenham obtido autorização para compartilhá-los com {article} <b>{name}</b>.</li>
-                </ol>
-              </li>
-              <li>As informações que {article} <b>{name}</b> coleta podem incluir, mas não se limitam a:
-                <ol>
-                  <li>Dados cadastrais e endereço;</li>
-                  <li>Dados para a verificação de identidade do Usuário;</li>
-                  <li>Dados para os processos de gestão de dados; e</li>
-                  <li>Dados de navegação.</li>
-                </ol>
-              </li>
-              <li>A veracidade das informações fornecidas por você são de sua responsabilidade, sendo de suma importância a exatidão destas informações para que {article} <b>{name}</b> realize o tratamento de forma adequada em seu interesse. É por meio destes dados que o contataremos e forneceremos nossos produtos e serviços a você.</li>
-              <li>Coleta de dados por meio de cookies:
-                <p>Aqui, você encontrará informações objetivas e claras sobre o que são Cookies, quais Cookies utilizamos em nosso site, qual papel desempenham e como configurá-los.</p>
-
-                <p><b>O que são cookies?</b></p>
-                <p>Cookies são pequenos arquivos de texto ou fragmentos de informação que são armazenados em seu dispositivo quando você visita nosso site. Servem para registrar informações que serão usadas em uma próxima visita, a fim de melhorar sua experiência de uso.</p>
-                <p>É importante ressaltar que contém informações pessoais específicas, como dados sensíveis. São eles: telefone e e-mail.</p>
-
-                <p>Tipos de cookies que {article} <b>{name}</b> utiliza:</p>
-
-                <p>Quanto à propriedade, os cookies podem ser:</p>
-                <ol>
-                  <li><b>Cookies proprietários ou primários:</b> são cookies definidos por nós ou por terceiros em nosso nome.</li>
-                  <li><b>Cookies de terceiros:</b> são cookies definidos por terceiros confiáveis em nossa aplicação.</li>
-                </ol>
-
-                <p>Os cookies, quanto ao seu tempo de vida, podem ser:</p>
-                <ol>
-                  <li><b>Cookies de sessão ou temporários:</b> são cookies que expiram assim que você fecha o seu navegador, encerrando a sessão.</li>
-                  <li><b>Cookies persistentes ou permanentes:</b> são cookies que permanecem no seu dispositivo durante um período determinado ou até que você os exclua.</li>
-                </ol>
-
-                <p>Os cookies, quanto a sua finalidade, podem ser:</p>
-                <ol>
-                  <li><b>Cookies necessários:</b>são cookies essenciais que possibilitam a navegação em nossas aplicações e o acesso a todos os recursos; sem estes, nossos serviços podem apresentar mau desempenho ou não funcionar. São geralmente de Sessão e Próprios.</li>
-                  <li><b>Cookies de desempenho:</b>são cookies que otimizam a forma que nossas aplicações funcionam, coletando informações anônimas sobre as páginas acessadas. São geralmente próprios.</li>
-                  <li><b>Cookies de funcionalidade:</b>são cookies que memorizam suas preferências e escolhas (como seu nome de usuário). São geralmente próprios e permanentes.</li>
-                  <li><b>Cookies de publicidade:</b>são cookies que direcionam anúncios em função dos seus interesses e limitam a quantidade de vezes que o anúncio aparece. São geralmente permanentes e podem ser de terceiros.</li>
-                  <li><b>Cookies de mídias sociais:</b>permitem que você se conecte com mídias sociais, tais como LinkedIn, Twitter, Facebook e Instagram. São geralmente permanentes e de Terceiros.</li>
-                  <li><b>Cookies de segurança:</b>nos ajudam a monitorar atividades fraudulentas e proteger os seus dados em acessos não autorizados. São geralmente permanentes e de Terceiros.</li>
-                </ol>
-
-                <p><b>Gerenciamento de cookies</b></p>
-
-                <p>A permissão do uso de cookies está sujeita ao seu consentimento. Apesar da maioria dos navegadores estarem inicialmente configurados para aceitar cookies de forma automática, você pode rever suas permissões a qualquer tempo, de forma a bloqueá-los, aceitá-los ou ativar notificações para quando alguns cookies forem enviados ao seu dispositivo.</p>
-                <p>Em nosso site, na primeira vez que você acessar nossas aplicações, será requerida a sua concordância com a instalação destes. Apenas após a sua aceitação eles serão ativados.</p>
-              </li>
-
-            </ol>
-          </li>
-          <li>USO DOS DADOS
-            <p>Os dados poderão ser acessados pel{article} <b>{name}</b>, parceiros, subcontratados e autoridades, de forma a possibilitar as funcionalidades dos nossos sites/aplicativos e os produtos e serviços por nós ofertados, ou mediante requisição de autoridades públicas nos moldes da legislação. Lembre-se, caso você acesse funcionalidades ou sites de parceiros, estará em outro ambiente e sujeito às práticas e políticas próprias desses parceiros.</p>
-            <ol>
-              <li>Os dados coletados dos usuários poderão ser utilizados para as seguintes finalidades:
-                <ol>
-                  <li>Identificação, autenticação e autorização;</li>
-                  <li>Atender adequadamente às solicitações e dúvidas, bem como prestar suporte aos usuários;</li>
-                  <li>Manter atualizados cadastros para fins de contato por telefone, mensagens ou por outros meios de comunicação;</li>
-                  <li>Aperfeiçoar o uso e a experiência interativa durante a navegação nos sites, aplicativos e serviços prestados pel{article} <b>{name}</b>;</li>
-                  <li>Efetuar estatísticas, estudos, pesquisas, planejamento de projetos e levantamentos pertinentes às atividades e comportamentos do usuário ao utilizar os sites e serviços prestados pel{article} <b>{name}</b>;</li>
-                  <li>Promover os serviços d{article} <b>{name}</b> e de seus parceiros, além de informar sobre novidades, funcionalidades, conteúdos, notícias e demais informações relevantes para a manutenção do relacionamento com {article} <b>{name}</b>;</li>
-                  <li>Colaborar e/ou cumprir ordem judicial ou requisição por autoridade administrativa, bem como atender obrigações de reportar preventivamente determinadas atividades para autoridades competentes;</li>
-                  <li>Prosseguir com pedidos de pagamento efetuados pelos usuários;</li>
-                  <li>Enviar newsletters e e-mails que o usuário expressamente concordar em receber;</li>
-                  <li>Gerenciar riscos e detectar, prevenir e/ou remediar fraudes ou outras atividades potencialmente ilegais ou proibidas, além de violações de políticas ou termos de uso aplicáveis;</li>
-                  <li>Compartilhar informações de pagamento entre {article} <b>{name} e parceiros</b>, visando facilitar a experiência dos usuários ao utilizar os sites, aplicativos e serviços oferecidos;</li>
-                  <li>Consultar os dados em bureaus privados e públicos para verificar se estão corretos, atualizá-los ou solicitar dados complementares.</li>
-                </ol>
-              </li>
-              <li>O uso, acesso e compartilhamento da base de dados formada nos termos da presente Política de Privacidade serão feitos dentro dos limites e propósitos das atividades d{article} <b>{name}</b>, podendo ser fornecidas e disponibilizadas para acesso e/ou consulta para as empresas parceiros de negócios, fornecedores, prestadores de serviço, subcontratados, autoridades ou terceiros em geral, desde que obedecido o disposto na presente Política de Privacidade, na Legislação Aplicável ou por determinação judicial.</li>
-              <li>{article.toUpperCase()} <b>{name}</b> se compromete a resguardar o seu sigilo ﬁnanceiro e bancário através do não compartilhamento dessas informações com empresas com as quais você não tenha concordado. Você reconhece que {article} <b>{name}</b> é obrigada a atender uma série de obrigações legais em decorrência da legislação aplicável relacionadas com a identidade de seus clientes e a origem dos fundos que opera.</li>
-              <li>Lembramos que você é responsável pelo sigilo, utilização e todos os atos no uso das Credenciais (tais como, mas não limitados a, login, senha e token de autenticação). Caso você identiﬁque ou desconﬁe que um terceiro tenha acesso à sua senha, deverá alterar diretamente nos sistemas ou serviços, ou nos solicitar auxílio por meio do telefone d{article} <b>{name}</b>. Lembre-se que o compartilhamento de Credenciais decorrente de sua ação conﬁgura um risco a segurança da sua informação e violação a esta Política de Privacidade.</li>
-              <li>Desde já você está ciente que {article} <b>{name}</b> poderá realizar (i) a anonimização dos Dados Pessoais, tornando-os Dados Anonimizados; (ii) o enriquecimento da sua base de dados, adicionando informações oriundas de outras fontes legítimas; e (iii) tratamento de Dados Pessoais com base no legítimo interesse d{article} <b>{name}</b>, conforme previsto na Legislação Aplicável.</li>
-              <li>Você reconhece e concorda que {article} <b>{name}</b> poderá utilizar os dados para traçar o seu perﬁl, de forma a aprimorar os seus serviços ou atender a legislação aplicável, incluindo, mas não se limitando, obrigações de conheça-o-seu-cliente. O perﬁl do usuário será compartilhado exclusivamente nos termos da presente Política de Privacidade ou da legislação aplicável.</li>
-              <li>Internamente, os dados somente serão acessados por proﬁssionais devidamente autorizados pel{article} <b>{name}</b>, respeitando os princípios da ﬁnalidade, adequação e necessidade, entre outros previstos na legislação aplicável, para os objetivos d{article} <b>{name}</b>, além do compromisso de conﬁdencialidade e preservação da privacidade nos termos desta Política de Privacidade.</li>
-              <li>Os dados anonimizados poderão ser coletados, tratados, armazenados, utilizados, transferidos e divulgados para qualquer ﬁnalidade, independentemente da sua autorização, nos termos da Lei nº 13.709/2018.</li>
-              <li>{article.toUpperCase()} <b>{name}</b> preza pela segurança e inviolabilidade das suas credenciais. Por esse motivo constantemente busca e monitora a internet em suas diversas camadas com a ﬁnalidade de identiﬁcar, coletar e tratar para ﬁns de validação (testes de autenticação) logins e senhas potencialmente pertencentes aos usuários que tenham sido indevidamente publicados na internet por terceiros.</li>
-              <li>Se por meio de testes de autenticação {article} <b>{name}</b> constatar que as suas credenciais foram comprometidas (tornadas acessíveis para terceiros), {article} <b>{name}</b> – por segurança e no intuito de impedir o acesso inapropriado de terceiros a sua conta e dados – bloqueará preventivamente as suas credenciais. Havendo dúvidas sobre, você pode consultar o <b>termo e condições de uso em nosso  site</b>.</li>
-            </ol>
-          </li>
-          <li>ARMAZENAMENTO DOS DADOS
-            <p>Armazenamos os seus dados em local seguro. A qualquer momento, você poderá solicitar a exibição, correção ou exclusão dos seus dados. Lembramos que poderemos manter os seus dados coletados para cumprimento legal, auditoria e preservação de direitos, pelo prazo necessário para cumprir essas responsabilidades.</p>
-
-            <ol>
-              <li>Os seus dados coletados estarão armazenados em ambiente seguro e controlado. No entanto, eventuais danos e/ou prejuízo decorrentes de falhas, vírus ou invasões do banco de dados dos sites, aplicativos e serviços por nós oferecidos podem ocorrer, de maneira que a <b>{name}</b> não medirá esforços em garantir a segurança dos seus dados adotando as medidas de segurança adequadas. Caso tais eventos ocorram, notificaremos os usuários afetados, sendo tomada todas as medidas cabíveis.</li>
-              <li>Os seus dados obtidos poderão ser armazenados em servidor próprio d{article} <b>{name}</b> ou de terceiro contratado para esse ﬁm, na hipótese de mantermos nossa base de dados em servidores de terceiros, exigiremos que os dados estejam armazenados conforme os padrões legais aplicáveis de segurança e controle.</li>
-            </ol>
-          </li>
-          <li>DIREITOS DOS TITULARES DE DADOS PESSOAIS
-            <ol>
-              <li>{article.toUpperCase()} <b>{name}</b> está comprometida em garantir a proteção de seus direitos sob as leis aplicáveis, incluindo o respeito aos seus direitos, a serem exercidos mediante a solicitação destinada ao nosso DPO através do telefone d{article} <b>{name}</b></li>
-              <ol>
-                <li>Direito de confirmação da existência de tratamento: você possui o direito de receber confirmação sobre a existência de tratamento de seus dados pessoais.</li>
-                <li>Direito de acesso e de retificação: você pode solicitar acesso aos seus dados pessoais, assim como, a correção de dados pessoais imprecisos, incompletos ou desatualizados, além de poder solicitar uma cópia dos dados pessoais tratados pelo Controlador.</li>
-                <li>Direito de eliminação dos dados pessoais: o direito de eliminação concede a você o direito de solicitar a exclusão de seus dados pessoais (i) nos casos em que os dados não são mais necessários, (ii) em que houver retirada do seu consentimento, (iii) em que existir uma obrigação legal de apagar seus dados pessoais.</li>
-                <li>Direito de portabilidade: a portabilidade dos dados pessoais fornecidos, em um formato estruturado, comumente utilizado. Você possui o direito de transmitir esses dados para outro Controlador ou a há terceiro escolhido, sem impedimentos.</li>
-                <li>Direito de informação: você possui o direito de ser informado, de maneira clara e acessível, sobre a coleta e uso de seus dados pessoais, sendo necessário garantir ao titular de dados informações como o propósito do tratamento de dados, o período de retenção, e com quem será compartilhada a informação; a possibilidade de não fornecer o consentimento e as consequências de sua negativa; as entidades públicas ou privadas com as quais o Controlador realizou compartilhamento de seus dados pessoais.</li>
-                <li>Revogação do consentimento: você tem o direito de solicitar a revogação do consentimento, quando o tratamento de dados tiver como fundamento a base legal do consentimento.</li>
-                <li>Direito de solicitar revisão ao tratamento automatizado: solicitar a revisão de decisão tomada unicamente com base em tratamento automatizado de dados pessoais que afetem seus interesses, incluídas as decisões destinadas a definir o seu perfil pessoal, profissional, de consumo e de crédito ou os aspectos de sua personalidade.</li>
-              </ol>
-            </ol>
-          </li>
-          <li>DISPOSIÇÕES GERAIS
-            <p>A presente Política de Privacidade está sujeita a alterações regulares para garantir que esteja atualizada com o uso de suas informações pessoais e conforme a legislação aplicável.</p>
-            <ol>
-              <li>Eventuais atualizações na presente política, notificaremos todos os usuários, mediante as ferramentas disponíveis nos sites, aplicativos e serviços por nós prestados e/ou meios de contato fornecidos por você.</li>
-              <li>Caso possua quaisquer dúvidas sobre a presente Política de Privacidade ou queira exercer algum dos seus direitos elencados na cláusula 4, você poderá entrar em contato através do canal de atendimento pelo telefone d{article} <b>{name}</b>.</li>
-              <li>Caso você considere que violamos alguma disposição legal ou desta Política de Privacidade, você tem o direito de apresentar uma reclamação em nossos canais de atendimento, além de peticionar junto à autoridade competente caso entenda necessário.</li>
-              <li>Empresas terceirizadas que realizem o processamento de quaisquer dados coletados por nós, deverão respeitar as condições aqui estipuladas e as normas de Segurança da Informação d{article} <b>{name}</b>, obrigatoriamente.</li>
-              <li> Na eventualidade de alguma disposição desta Política de Privacidade ser considerada ilegal ou ilegítima pela autoridade competente da localidade em que o usuário resida ou da sua conexão à internet, as demais condições permanecerão em pleno vigor e efeito.</li>
-            </ol>
-          </li>
-          <p><b>Atualização: 15 de Maio de 2021.</b></p>
-        </ol>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
