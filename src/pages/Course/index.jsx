@@ -218,7 +218,7 @@ export default function CourseNew(props) {
                 >
 
                   Li e concordo com a <Link
-                    href="/politica-de-cookies"
+                    href="/politica-de-privacidade"
                     target="_blank"
                     marginLeft={1}
                     className="link_lgpd"

@@ -28,7 +28,7 @@ export default function CourseInformationNew({
     
     
    
-        <div className={window.location.pathname.includes("pos-", 0) ? "courseInformationNewPos" : "courseInformationNew"} id={sectionId && sectionId}>
+        <div className="courseInformationNew" id={sectionId && sectionId}>
         <Provider>
           <div className="courseInformation-flexSection">
   

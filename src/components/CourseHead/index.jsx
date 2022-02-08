@@ -57,7 +57,7 @@ export default function CourseHead({
       {
         window.location.pathname !== "/formacao-em-marketing-product-management-parceria-le-wagon" ?
           (
-            <div className={window.location.pathname.includes("pos-", 0) ? "header-course3" : "header-course" }>
+            <div className="header-course">
 
               <Provider>
                 <div className="row">
@@ -108,17 +108,12 @@ export default function CourseHead({
 
                 </div>
               </Provider>
-                {
-                  window.location.pathname.includes("pos-", 0) ?
-                  <Disc
-                fill="#900033"
-                />
-                :
-                <Disc
+
+              <Disc
                 fill="#723090"
-                />
-                }
-              
+              />
+
+
             </div>
           )
           :
